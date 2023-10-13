@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit{
   getdata1:any;
   getdata2:any;
   signupobj:signup=new signup("","","","","","","")
+  signups:boolean=false
   constructor(private userservice:UserserviceService,private router:Router){
   }
   ngOnInit(){
@@ -64,11 +65,13 @@ export class LoginComponent implements OnInit{
 } 
 
   signup(){
-      if(this.signupobj.customerName!=null){
-        if(this.signupobj.email!=null){
-          if(this.signupobj.phoneNumber!=null){
-            if(this.signupobj.address!=null){
-              if(this.signupobj.password==this.signupobj.cpassword){
+      if(this.signupobj.customerName!=""){
+        if(this.signupobj.email!=""){
+          if(this.signupobj.phoneNumber!=""){
+            if(this.signupobj.address!=""){
+              if(this.signupobj.password!=""){
+                if(this.signupobj.password==this.signupobj.cpassword){
+                  if(this.signupobj.gender!="")
                 this.userservice.addACustomer(this.signupobj).subscribe((data)=>{
                   if(data=="Created"){
                     alert("Added successfully")
@@ -80,9 +83,17 @@ export class LoginComponent implements OnInit{
                     alert("error")
                   } 
                 })
-              }
               else{
+                alert("select a gender")
+              }
+              }
+
+            else{
                 alert("password and confirm password are not same")
+            }
+          }
+              else{
+                alert("password should not be empty")
               }
 
             }
@@ -97,7 +108,7 @@ export class LoginComponent implements OnInit{
 
         }
         else{
-          alert("CustomerName cant be empty")
+          alert("Email cant be empty")
         }
       }
       else{

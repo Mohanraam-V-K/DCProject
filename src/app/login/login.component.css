@@ -336,7 +336,7 @@ input{
 
 .dorm1{
 
-    background: gray !important;
+    background: rgb(46, 43, 43) !important;
 
     height: 520px;
 
@@ -575,6 +575,11 @@ h3{
     border-radius: 5px;
 
     cursor: pointer;
+
+}
+#d:hover{
+
+    color: gray;
 
 }
 
