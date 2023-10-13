@@ -1,0 +1,114 @@
+<!-- <div class="search">
+    <input type="search"/>
+    <button mat-button><mat-icon style="transform: scale(1.3);">search</mat-icon></button>
+
+
+
+
+<div class="lists" >
+
+    <h2>Mobile</h2>
+
+  <table class="a">
+
+      <thead>
+
+          <tr>
+
+              <th>S.no</th>
+
+              <th>Name</th>
+
+              <th>Email</th>
+
+              <th>Gender</th>
+
+              <th>Phone</th>
+
+          </tr>
+
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let k of rout, let z=index" id="b" (click)="name = k.email"  (click)="email()">
+  
+          <td>{{z+1}}</td>
+  
+          <td>{{k.customerName}}</td>
+  
+          <td>{{k.email}}</td>
+  
+          <td>{{k.gender}}</td>
+
+          <td>{{k.phoneNumber}}</td>
+  
+        </tr>
+  
+      </tbody>
+
+  </table>
+
+</div>
+</div> -->
+
+
+<div class="background">
+  <div class="lists1">
+
+    <table class="b">
+        <!-- <tbody *ngFor="let k of rout"> -->
+            
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>{{name}}</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>{{type}}</td>
+
+            </tr>
+
+            
+
+           
+
+            
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>{{duration}}</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>{{amount}}</td>
+
+            </tr>
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Due Date:</th>
+
+                <td>{{due}}</td>
+
+            </tr>
+        <!-- </tbody> -->
+
+ 
+
+    </table>
+
+</div>
+
+</div>

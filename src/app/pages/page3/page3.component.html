@@ -1,0 +1,794 @@
+<div class="background"><button class="press" (click)="mobile1()">Mobile</button>
+
+    <button class="press" (click)="internet1()">Internet</button>
+
+
+
+<div class="lists" *ngIf="mobile" >
+
+    <h2>Mobile</h2>
+
+  <table class="a">
+
+      <thead>
+
+          <tr>
+
+              <th>S.no</th>
+
+              <th>Name</th>
+
+              <th>Validity</th>
+
+              <th>Amount</th>
+
+          </tr>
+
+      </thead>
+
+      <tbody>
+
+          <tr (click)="planm1()">
+
+              <th>1</th>
+
+              <td>CWC199</td>
+
+              <td>28</td>
+
+              <td>199.00</td>
+
+          </tr>
+
+      </tbody>
+
+      <tbody>
+
+          <tr (click)="planm2()" >
+
+              <th>2</th>
+
+              <td>Value</td>
+
+              <td>30</td>
+
+              <td>139.00</td>
+
+          </tr>
+
+      </tbody>
+
+      <tbody>
+
+        <tr (click)="planm3()" >
+
+            <th>3</th>
+
+            <td>AIRoam</td>
+
+            <td>30</td>
+
+            <td>179.00</td>
+
+        </tr>
+
+    </tbody>
+
+    <tbody>
+
+        <tr (click)="planm4()" >
+
+            <th>4</th>
+
+            <td>Value Annual</td>
+
+            <td>365</td>
+
+            <td>1599.00</td>
+
+        </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+<div class="lists" *ngIf="internet">
+
+    <h2>Internet</h2>
+
+    <table class="a">
+
+        <thead>
+
+            <tr>
+
+                <th>S.no</th>
+
+                <th>Name</th>
+
+                <th>Validity</th>
+
+                <th>Amount</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr (click)="plani1()">
+
+                <th>1</th>
+
+                <td>1GB/day</td>
+
+                <td>28</td>
+
+                <td>209.00</td>
+
+            </tr>
+
+        </tbody>
+
+        <tbody>
+
+            <tr (click)="plani2()" >
+
+                <th>2</th>
+
+                <td>2GB/day</td>
+
+                <td>28</td>
+
+                <td>299.00</td>
+
+            </tr>
+
+        </tbody>
+
+        <tbody>
+
+          <tr (click)="plani3()" >
+
+              <th>3</th>
+
+              <td>30GB/month</td>
+
+              <td>30</td>
+
+              <td>335.00</td>
+
+          </tr>
+
+      </tbody>
+
+      <tbody>
+
+          <tr (click)="plani4()" >
+
+              <th>4</th>
+
+              <td>1GB/yr</td>
+
+              <td>365</td>
+
+              <td>2499.00</td>
+
+          </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <div class="lists1" *ngIf="plan11">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >M1001</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>CWC199</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Mobile</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>N/A</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>100 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>28 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 199.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+
+<div class="lists1" *ngIf="plan12">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >M1002</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>Value</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Mobile</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>N/A</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>100 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>30 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 139.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+
+<div class="lists1" *ngIf="plan13">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >M1003</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>AIRoam</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Mobile</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>N/A</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>300 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>30 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 179.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+
+<div class="lists1" *ngIf="plan14">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >M1004</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>Value Annual Plan</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Mobile</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>N/A</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>100 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>365 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 1599.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+
+<div class="lists1" *ngIf="plan21">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >I1001</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>1GB/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Internet</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>1GB/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>100 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>28 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 209.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+
+<div class="lists1" *ngIf="plan22">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >I1002</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>2GB/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Internet</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>2GB/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>100 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>28 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 299.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+
+<div class="lists1" *ngIf="plan23">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >I1003</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>30GB/month</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Internet</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>30GB/month</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>100 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>30 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 335.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+
+<div class="lists1" *ngIf="plan24">
+
+    <table class="b">
+
+            <tr>
+
+                <th style="transform: translate(16%,0%);">ID :</th>
+
+                <td >I1004</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Plan :</th>
+
+                <td>1GB/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Type :</th>
+
+                <td>Internet</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">Data :</th>
+
+                <td>1GB/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th>Talktime :</th>
+
+                <td>Unlimited Calls</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(10%,0%);">SMS :</th>
+
+                <td>100 messages/day</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(3%,0%);">Validity :</th>
+
+                <td>365 Days</td>
+
+            </tr>
+
+            <tr>
+
+                <th style="transform: translate(2%,0%);">Amount :</th>
+
+                <td>Rs 2499.00</td>
+
+            </tr>
+
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+
+ 
+
+    </table>
+
+</div>
+</div>

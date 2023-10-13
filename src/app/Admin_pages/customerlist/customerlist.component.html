@@ -1,0 +1,185 @@
+<div class="search">
+    <input type="search"/>
+    <button mat-button><mat-icon style="transform: scale(1.3);">search</mat-icon></button>
+
+
+
+
+<div class="lists" >
+  <table class="a">
+
+      <thead>
+
+          <tr>
+
+              <th>S.no</th>
+
+              <th>Name</th>
+
+              <th>Email</th>
+
+              <th>Gender</th>
+
+              <th>Phone</th>
+
+          </tr>
+
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let k of rout, let z=index" id="b" (click)="name = k.email"  (click)="email()">
+  
+          <td>{{z+1}}</td>
+  
+          <td>{{k.customerName}}</td>
+  
+          <td>{{k.email}}</td>
+  
+          <td>{{k.gender}}</td>
+
+          <td>{{k.phoneNumber}}</td>
+  
+        </tr>
+  
+      </tbody>
+      <!-- <tbody>
+
+          <tr (click)="email()">
+
+              <th>1</th>
+
+              <td>M110012023</td>
+
+              <td>01-10-2023</td>
+
+              <td>199.00</td>
+
+          </tr>
+
+      </tbody>
+
+      <tbody>
+
+          <tr>
+
+              <th (click)="email()">2</th>
+
+              <td>I209112023</td>
+
+              <td>11-09-2023</td>
+
+              <td>299.00</td>
+
+          </tr>
+
+      </tbody>
+
+      <tbody>
+
+        <tr>
+
+            <th>3</th>
+
+            <td>M310072023</td>
+
+            <td>07-10-2023</td>
+
+            <td>179.00</td>
+
+        </tr>
+
+    </tbody>
+
+    <tbody>
+
+        <tr>
+
+            <th>4</th>
+
+            <td>I410122023</td>
+
+            <td>12-10-2023</td>
+
+            <td>2499.00</td>
+
+        </tr>
+
+    </tbody> -->
+
+  </table>
+
+</div>
+<div class="background" >
+    <div class="lists1" *ngIf="planlist">
+  
+      <table class="b">
+          <!-- <tbody *ngFor="let k of rout"> -->
+              
+  
+              <tr>
+  
+                  <th style="transform: translate(10%,0%);">Plan :</th>
+  
+                  <td>{{cusname}}</td>
+  
+              </tr>
+  
+              <tr>
+  
+                  <th style="transform: translate(10%,0%);">Type :</th>
+  
+                  <td>{{type}}</td>
+  
+              </tr>
+  
+              
+  
+             
+  
+              
+  
+              <tr>
+  
+                  <th style="transform: translate(3%,0%);">Validity :</th>
+  
+                  <td>{{duration}}</td>
+  
+              </tr>
+  
+              <tr>
+  
+                  <th style="transform: translate(2%,0%);">Amount :</th>
+  
+                  <td>{{amount}}</td>
+  
+              </tr>
+              <tr>
+  
+                  <th style="transform: translate(2%,0%);">Due Date:</th>
+  
+                  <td>{{duedate}}</td>
+  
+              </tr>
+          <!-- </tbody> -->
+  
+   
+  
+      </table>
+  
+  </div>
+  
+  </div>
+</div>
+<!-- <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="#about">About</a>
+      <a href="#base">Base</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="#custom">Custom</a>
+      <a href="#support">Support</a>
+      <a href="#tools">Tools</a>
+    </div>
+  </div> -->

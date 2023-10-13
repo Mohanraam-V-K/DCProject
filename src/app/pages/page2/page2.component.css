@@ -1,0 +1,341 @@
+.lists {
+
+ 
+
+    margin-top: 5rem;
+  
+   
+  
+    margin-right: 6rem;
+  
+   
+  
+    margin-left: 0rem;
+  
+   
+  
+    width: 600px;
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+   
+  
+  .lists table {
+  
+   
+  
+    background: transparent;
+  
+   
+  
+    padding: 10px;
+  
+   
+  
+    width: 100%;
+  
+   
+  
+    border-radius: 15px;
+  
+   
+  
+    margin-top: 1rem;
+  
+   
+  
+    margin-left: 3rem;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    box-shadow: 2px 5px 10px 1px rgb(0, 0, 0, 0.15);
+  
+   
+  
+    transition: all 300ms ease;
+  
+   
+  
+  }
+  .background{
+    background-color: aliceblue;
+    height:705px;
+    width: 1290px;
+    transform: translate(0%,-3%);
+
+}
+  
+  .lists1 table {
+  
+   
+  
+    background: rgb(221, 223, 224);
+  
+   
+  
+    padding: 10px;
+  
+   
+  
+    width: 100%;
+  
+   
+  
+    border-radius: 15px;
+  
+   
+  
+    margin-top: 1rem;
+  
+   
+  
+    /* margin-left: 3rem; */
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    box-shadow: 2px 5px 10px 1px rgb(0, 0, 0, 0.15);
+  
+   
+  
+    transition: all 300ms ease;
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+  /* .lists {
+  
+   
+  
+    margin-top: 2rem;
+  
+   
+  
+    margin-right: 6rem;
+  
+   
+  
+  } */
+  
+   
+  
+   
+  
+   
+  
+  .lists h2 {
+  
+   
+  
+    margin-left: 3rem;
+  
+   
+  
+    margin-top: 1.4rem;
+  
+   
+  
+  }
+  
+   
+  
+  .lists1 h2 {
+  
+   
+  
+    margin-left: 3rem;
+  
+   
+  
+    margin-top: 1.4rem;
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+   
+  
+  .a td {
+  
+   
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+  }
+  
+  .a th {
+  
+   
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+  }
+  
+   
+  
+  .b th{
+  
+   
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+  }
+  
+   
+  
+  .b td{
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+  }
+  
+   
+  
+  .press{
+  
+    padding: 16px 16px;
+  
+    margin-top: 2rem;
+  
+    margin-left: 6rem;
+  
+    margin-bottom: 1rem;
+  
+    background-color: rgb(65, 174, 143);
+  
+    font-weight: 500;
+  
+    font-size: large;
+  
+    color: aliceblue;
+  
+    border-radius: 10px;
+  
+    border: rgb(65, 174, 143);
+  
+   
+  
+  }
+  
+  .press:hover{
+  
+    background-color: rgb(15, 143, 106);
+  
+  }
+  
+   
+  
+  table tr:hover{
+  
+   
+  
+    box-shadow: 2px 5px 10px 1px rgb(0, 0, 0, 0.15);
+  
+   
+  
+    background-color: rgb(158, 221, 255);
+  
+   
+  
+    transition: all 300ms ease;
+  
+  }
+  
+   
+  
+  .lists1{
+  
+    width: 400px;
+  
+    /* margin-top: 0rem ;
+  
+    margin-left: 0rem ; */
+  
+    /* box-shadow: 0 0 20px black; */
+  
+    border-radius: 10px;
+    transform: translate(10%,20%);
+  
+    /* background-color: aqua; */
+  
+  }
+  
+  .lists2{
+  
+    width: 500px;
+  
+    margin-top: -9.5rem ;
+  
+    margin-left: 40rem ;
+  
+  }

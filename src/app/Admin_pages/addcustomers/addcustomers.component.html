@@ -1,0 +1,37 @@
+<div>
+
+    <form class="dorm2" >
+    
+    
+        <h3>Add New Customer</h3>
+    
+        <label class="lab1" for="Name">Customer Name :</label>
+    
+        <input class="input1" type="text" name ="customerName" [(ngModel)]="addobj.customerName"  placeholder="Enter customer name" id="customerName">
+        
+        <!-- <label class="lab1" for="password">{{changeobj.oldpassword}}</label> -->
+    
+        <label class="lab1" for="Email">Customer Email :</label>
+    
+        <input class="input1" type="text" name ="email" [(ngModel)]="addobj.email"  placeholder="Enter customer's email" id="email">
+    
+        <label class="lab1" for="number">Customer Phone number :</label>
+    
+        <input class="input1" type="text" name ="phoneNumber" [(ngModel)]="addobj.phoneNumber"  placeholder="Enter customer's phone number" id="phoneNumber">
+
+        <label class="lab1" for="Name">Address :</label>
+    
+        <input class="input1" type="text" name ="address" [(ngModel)]="addobj.address"  placeholder="Enter Address" id="address">
+        
+        <label class="lab1" for="Gender">Customer Gender :</label>
+
+        <select class="input2" name="gender" id="gender" [(ngModel)]="addobj.gender" >
+            <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="male">Male</option>
+            <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="female">Female</option>
+            <option style="background-color:rgb(58, 55, 55);color: aliceblue;" value="others">Others</option>
+        </select>
+
+        <button id="d" style="color: black" (click)="addacustomer()" >Add</button>
+    
+      </form></div>
+<router-outlet></router-outlet>

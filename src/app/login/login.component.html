@@ -1,0 +1,89 @@
+<!-- <form action="action_page.php" method="post">
+    <div class="imgcontainer">
+      <img src="../../assets/admin.png" alt="Avatar" class="avatar">
+    </div>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="userobj.username"/>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="userobj.password"/>
+      <button type="submit" (click)="loginnow()">Login</button>
+      <button type="signup" (click)="registernow()">Signup</button>
+    </div>
+  </form>
+<router-outlet></router-outlet> -->
+  <!-- <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <form *ngIf="!isRegister">
+    <h3>Sign in</h3>
+    <label for="username">Username</label>
+    <input type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email or Phone" id="username">
+    <label for="password">Password</label>
+    <input type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Password" id="password">
+    <button id="b" style="color: black" (click)="loginnow()" routerLink="login">Sign In</button>
+    <div class="social">
+        <button id="c" class="go" (click)="isRegister = !isRegister"> <i class="fab fa-google"></i>  Sign up</button>
+    </div>
+  </form>
+  <form *ngIf="isRegister">
+    <h3>Sign up</h3>
+    <label for="username">Name</label>
+    <input type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Name" id="username">
+    <label for="password">Password</label>
+    <input type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Password" id="password">
+    <button id="b" style="color: black" (click)="registernow()">Sign up</button>
+    <div class="social">
+        <button id="c" class="go" (click)="isRegister = !isRegister"> <i class="fab fa-google"></i>  Sign in</button>
+    </div>
+  </form>
+<router-outlet></router-outlet> -->
+
+
+
+<div class="background">
+
+</div>
+<form class="dorm2" *ngIf="!isRegister">
+  
+  <h3>Sign in</h3>
+
+  <label class="lab1" for="username">Username :</label>
+
+  <input class="input1" type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email or Username" id="username">
+
+  <label class="lab1" for="password">Password :</label>
+
+  <input class="input1" type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Password" id="password">
+
+  
+
+  <button id="b" style="color: black" (click)="loginnow()">Sign In</button>
+
+  <p class="font" (click)="isRegister = !isRegister">Forgot Password ?</p>
+
+</form>
+
+<form class="dorm2" *ngIf="isRegister">
+
+  <h3>Forgot Password</h3>
+
+  <label class="lab1" for="username">Enter Email  :</label>
+
+  <input class="input1" type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email" id="username">
+
+  <button id="d" style="color: black" (click)="forgotnow()">Send OTP</button>
+
+  <label class="lab1" for="password">Enter OTP :</label>
+
+  <input class="input1" type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Enter OTP" id="password">
+
+  <button id="b" style="color: black" (click)="loginnow()" routerLink="login">Confirm</button>
+
+  <p class="font" (click)="isRegister = !isRegister">Sign in</p>
+
+</form>
+<router-outlet></router-outlet>

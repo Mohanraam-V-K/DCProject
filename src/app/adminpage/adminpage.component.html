@@ -1,0 +1,54 @@
+<div id="b" fxLayout="column" fxFlexFill>
+    <mat-toolbar fxLayout="row" fxLayoutAlign="start stretch" >
+      <button mat-button (click)="drawer.toggle()">
+        <mat-icon class="mat-icon-size">menu</mat-icon>
+      </button>
+      <button mat-button routerLink="/adminpage/adminhome" routerLinkActive="router-link-active">
+        <mat-icon>home</mat-icon>
+      </button>
+      <!-- <button class="pos" mat-button (click)="drawer1.toggle()">
+        <mat-icon >account_circle</mat-icon>
+      </button> -->
+      <span fxFlex></span>
+    </mat-toolbar>
+    <mat-drawer-container fxFlex autosize class="background">
+      <mat-drawer #drawer opened="true" mode="side">
+        <div fxLayout="column">
+          <button id="a"  mat-button routerLink="/adminpage/customerlist" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon class="mr-2" >search</mat-icon>Customers</button>
+          <mat-divider></mat-divider>
+          <button id="a" mat-button routerLink="/adminpage/addcustomers" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon class="mr-2">add</mat-icon>Add Customers</button>
+          <mat-divider></mat-divider>
+          <button id="a" mat-button routerLink="/adminpage/allplans" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon class="mr-2">receipt</mat-icon>All Plans</button>
+          <mat-divider></mat-divider>
+          <button id="a" mat-button routerLink="/adminpage/bills" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon class="mr-2">payment</mat-icon>Bills</button>
+          <mat-divider></mat-divider>
+          <button id="a" mat-button routerLink="/adminpage/reports" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon class="mr-2">report</mat-icon>Reports</button>
+            <mat-divider></mat-divider>
+            <button id="a" mat-button (click)="logout()" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+              <mat-icon class="mr-2">logout</mat-icon>Logout</button>
+              
+        </div>
+      </mat-drawer>
+      <mat-drawer class="height" style="border-radius: 10px;"  position="end" #drawer1>
+        <div fxLayout="column">
+          <button id="a" mat-button routerLink="/page1" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon id="a" class="mr-2">person_outline</mat-icon>Profile</button>
+          <mat-divider></mat-divider>
+          <button id="a" style="color: aqua;" mat-button routerLink="/page2" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon class="mr-2">lock_open</mat-icon>Change Password</button>
+          <mat-divider></mat-divider>
+          <button id="a" style="color: aqua;" mat-button routerLink="/page3" routerLinkActive="selected no-border txt-bold" fxLayoutAlign="start" class="py-2 pr-5">
+            <mat-icon class="mr-2">logout</mat-icon>Log Out</button>
+          <mat-divider></mat-divider>
+        </div>
+      </mat-drawer>
+      <div style="display: inline;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-container>
+  </div>

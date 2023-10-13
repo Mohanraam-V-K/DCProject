@@ -1,0 +1,352 @@
+.lists {
+
+ 
+
+    margin-top: 2rem;
+  
+   
+  
+    margin-right: 6rem;
+  
+   
+  
+    margin-left: 0rem;
+  
+   
+  
+    width: 500px;
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+   
+  
+  .lists table {
+  
+   
+  
+    /* background: transparent; */
+  
+   
+  
+    padding: 10px;
+  
+   
+  
+    width: 100%;
+  
+   
+  
+    border-top-right-radius: 15px;
+  
+   
+  
+    border-top-left-radius: 15px;
+  
+   
+  
+    border-bottom-right-radius: 15px;
+  
+   
+  
+    border-bottom-left-radius: 15px;
+  
+   
+  
+    margin-top: 1rem;
+  
+   
+  
+    margin-left: 3rem;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    box-shadow: 2px 5px 10px 1px rgb(0, 0, 0, 0.15);
+  
+   
+  
+    transition: all 300ms ease;
+  
+   
+  
+  }
+  
+  .lists1 table {
+  
+   
+  
+    background: transparent;
+  
+   
+  
+    padding: 10px;
+  
+   
+  
+    width: 100%;
+  
+   
+  
+    border-radius: 15px;
+  
+   
+  
+    margin-top: 1rem;
+  
+   
+  
+    /* margin-left: 3rem; */
+  
+   
+  
+    text-align: center;
+  
+   
+  
+    box-shadow: 2px 5px 10px 1px rgb(0, 0, 0, 0.15);
+  
+   
+  
+    transition: all 300ms ease;
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+  /* .lists {
+  
+   
+  
+    margin-top: 2rem;
+  
+   
+  
+    margin-right: 6rem;
+  
+   
+  
+  } */
+  
+   
+  
+   
+  
+   
+  
+  .lists h2 {
+  
+   
+  
+    margin-left: 3rem;
+  
+   
+  
+    margin-top: 1.4rem;
+  
+   
+  
+  }
+  
+   
+  
+  .lists1 h2 {
+  
+   
+  
+    margin-left: 3rem;
+  
+   
+  
+    margin-top: 1.4rem;
+  
+   
+  
+  }
+  
+   
+  
+   
+  
+   
+  
+  .a td {
+  
+   
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+  }
+  
+  .a th {
+  
+   
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+  }
+
+  
+  
+   
+  
+  .b th{
+  
+   
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+    text-align: center;
+  
+   
+  
+  }
+  
+   
+  
+  .b td{
+  
+    height: 2.8rem;
+  
+   
+  
+    border-bottom: 1px solid white;
+  
+   
+  
+    color: black;
+  
+   
+  
+  }
+  
+   
+  
+  .press{
+  
+    padding: 16px 16px;
+  
+    margin-top: 2rem;
+  
+    margin-left: 6rem;
+  
+    margin-bottom: 1rem;
+  
+    background-color: #83b8ff;
+  
+    font-weight: 500;
+  
+    font-size: large;
+  
+    color: aliceblue;
+  
+    border-radius: 10px;
+  
+    border: rgb(65, 174, 143);
+  
+   
+  
+  }
+  
+  .press:hover{
+  
+    background-color: rgb(15, 143, 106);
+  
+  }
+  
+   
+  
+  table tbody:hover{
+  
+   
+  
+    box-shadow: 2px 5px 10px 1px rgb(0, 0, 0, 0.15);
+  
+   
+  
+    background-color: rgb(158, 221, 255);
+  
+   
+  
+    transition: all 300ms ease;
+  
+  }
+  
+.background{
+    background-color: aliceblue;
+    height:705px;
+    width: 1290px;
+
+}
+  
+  .lists1{
+  
+    width: 400px;
+  
+    margin-top: -30rem ;
+  
+    margin-left: 38rem ;
+  
+    /* box-shadow: 0 0 20px black; */
+  
+    border-radius: 10px;
+  
+    /* background-color: aqua; */
+  
+  }
+  
+  .lists2{
+  
+    width: 500px;
+  
+    margin-top: -9.5rem ;
+  
+    margin-left: 40rem ;
+  
+  }
