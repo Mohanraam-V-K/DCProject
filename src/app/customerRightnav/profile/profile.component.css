@@ -20,6 +20,13 @@
   
   }
 
+  #im{
+    background-image: url('logoDC.jpg');
+    height: 70px;
+    width: 70px;
+    background-size: 100%;
+  }
+
   .background{
     background-color: rgb(255, 255, 255);
     height: 505px;

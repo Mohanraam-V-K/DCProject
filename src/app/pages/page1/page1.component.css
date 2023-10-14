@@ -2,15 +2,15 @@ div{
 
     background-image: url('home.png');
 
-    width: 900px;
+    width: 1200px;
 
-    height: 506px;
+    height: 635px;
 
     background-repeat: no-repeat;
 
     background-size: 100%;
 
-    transform: translate(-10%,0%);
+    transform: translate(-10%,-15%);
 
     /* border-radius: 10px; */
 
