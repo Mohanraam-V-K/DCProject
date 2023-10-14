@@ -70,3 +70,35 @@
   
     font-weight: 500;
   }
+
+  .press{
+    padding: 12px 12px;
+    margin-top: 2rem;  
+    margin-left: 30rem;
+    margin-right: 0;
+    background-color: #6eadff;
+    font-weight: 500;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: rgb(65, 174, 143);
+  }
+  .press:hover{
+    background-color: #aec8ea;
+  }
+  .press1{
+    padding: 12px 12px;
+    /* margin-top: -20rem;  
+    margin-left: 23rem; */
+    transform: translate(500%,-96%);
+    margin-right: 0;
+    background-color: #6eadff;
+    font-weight: 500;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: rgb(65, 174, 143);
+  }
+  .press1:hover{
+    background-color: #aec8ea;
+  }

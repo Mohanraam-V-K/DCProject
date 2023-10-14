@@ -20,7 +20,22 @@
   
   }
   
-   
+  .press{
+    padding: 16px 16px;
+    /* margin-top: 2rem;  
+    margin-left: 6rem;
+    margin-bottom: 1rem; */
+    transform: translate(50%,150%);
+    background-color: #6eadff;
+    font-weight: 500;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: rgb(65, 174, 143);
+  }
+  .press:hover{
+    background-color: #aec8ea;
+  }
   
    
   
@@ -261,37 +276,7 @@
   
    
   
-  .press{
-  
-    padding: 16px 16px;
-  
-    margin-top: 2rem;
-  
-    margin-left: 6rem;
-  
-    margin-bottom: 1rem;
-  
-    background-color: rgb(65, 174, 143);
-  
-    font-weight: 500;
-  
-    font-size: large;
-  
-    color: aliceblue;
-  
-    border-radius: 10px;
-  
-    border: rgb(65, 174, 143);
-  
-   
-  
-  }
-  
-  .press:hover{
-  
-    background-color: rgb(15, 143, 106);
-  
-  }
+ 
   
    
   
