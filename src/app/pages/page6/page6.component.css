@@ -1,0 +1,58 @@
+.a{
+    background-color: aliceblue;
+    height: 700px;
+    width: 1290px;
+}
+.l1{
+    position: relative;
+    color: black;
+    font-size: large;
+    font-weight: 600;
+    top:17%;
+    left:10%;
+}
+.l2{
+    position: relative;
+    color: black;
+    font-size: large;
+    font-weight: 600;
+    transform: translate(32%,400%);
+}
+.a select{
+    position: relative;
+    transform: translate(33%,200%);
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #eceff1;
+
+    
+}
+.a textarea{
+    height: 100px;
+    width: 400px;
+    transform: translate(12%,90%);
+    border-radius: 15px;
+    background-color: #eceff1;
+}
+.a button{
+    padding: 3px 10px;
+    outline: none;
+    border: none;
+    background-color: #6eadff ;
+    border-radius: 5px;
+    transform: translate(100%,350%);
+}
+.form1{
+    height: 330px;
+    width: 500px;
+    background-color: #838588;
+    border-radius: 15px;
+    left: 350px;
+    top: 30px;
+    margin-bottom: 100px;
+    /* transform: translate(30%,60%); */
+    border: 2px solid;
+    border-color: rgb(146, 146, 146);
+    position: relative;
+}
