@@ -31,6 +31,7 @@ import { ProfileComponent } from './customerRightnav/profile/profile.component';
 import { AllplansComponent } from './Admin_pages/allplans/allplans.component';
 import { BillsComponent } from './Admin_pages/bills/bills.component';
 import { ReportsComponent } from './Admin_pages/reports/reports.component';
+import { Page7Component } from './pages/page7/page7.component';
 @NgModule({
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -52,7 +53,8 @@ import { ReportsComponent } from './Admin_pages/reports/reports.component';
     ProfileComponent,
     AllplansComponent,
     BillsComponent,
-    ReportsComponent
+    ReportsComponent,
+    Page7Component,
   ],
   imports: [
     BrowserModule,

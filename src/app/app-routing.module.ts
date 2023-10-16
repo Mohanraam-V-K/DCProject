@@ -18,6 +18,7 @@ import { CustomerlistComponent } from './Admin_pages/customerlist/customerlist.c
 import { AllplansComponent } from './Admin_pages/allplans/allplans.component'; 
 import { BillsComponent } from './Admin_pages/bills/bills.component';
 import { ReportsComponent } from './Admin_pages/reports/reports.component';
+import { Page7Component } from './pages/page7/page7.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
     {
       path: 'allplans',
       component: Page3Component
+    },
+    {
+      path:'buyplan',
+      component:Page7Component
     },
     {
       path: 'billhistory',
@@ -95,7 +100,7 @@ const routes: Routes = [
       component:BillsComponent
     }
   ]
-},
+}
 ];
 
 @NgModule({

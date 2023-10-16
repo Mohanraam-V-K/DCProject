@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-page3',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./page3.component.css']
 })
 export class Page3Component {
+
 
 
 mobile:boolean=false;
@@ -30,7 +32,7 @@ plan24:boolean=false;
 
 obj:any;
 
- 
+constructor(private router:Router){}
 
 mobile1(){
 
@@ -621,7 +623,7 @@ plani4(){
 }
 
 Buy(){
-
+this.router.navigate(['/customerpage/buyplan'])
  
 
 }

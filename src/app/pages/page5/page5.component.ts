@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./page5.component.css']
 })
 export class Page5Component {
-
+add:boolean=false;
 }

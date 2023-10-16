@@ -1,0 +1,86 @@
+<div class="a">
+    <form action="" class="form1">
+        <!-- <mat-toolbar class="top">
+            <button mat-button><mat-icon (click)="draw.toggle()">arrow_downward</mat-icon></button>
+        </mat-toolbar> -->
+        <mat-toolbar class="top" fxLayout="row" fxLayoutAlign="start stretch" >
+            <button mat-button (click)="draw1.toggle()"><b>Saved Cards</b>
+            </button>
+            <button mat-button (click)="draw.toggle()"><b>New Card</b>
+            </button>
+            
+            <!-- <span fxFlex></span> -->
+          </mat-toolbar>
+        <mat-drawer-container mode="up" class="top">
+            <mat-drawer style="background-color: aliceblue;" fxFlex autosize class="top1" #draw >
+                <form action="" class="form2">
+                    <div>
+                        <select class="select" name="select" id="select" >
+                            <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="male">Debit</option>
+                            <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="female">Credit</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">Card number :</label>
+                        <div> 
+                            <input type="text" name="no." id="no." placeholder="Card number">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Validity :</label>
+                        <div>
+                            <label for="">Month :</label>
+                            <select class="select" name="select" id="select" >
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="01">01</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">02</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="03">03</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">04</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="05">05</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="06">06</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="07">07</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="08">08</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="09">09</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="10">10</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="11">11</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="12">12</option>
+                            </select>
+                            <label for="">Year :</label>
+                            <select class="select" name="select" id="select" >
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="01">2023</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">2024</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="03">2025</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">2026</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="05">2027</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="06">2028</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="07">2029</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="08">2030</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="09">2031</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="10">2032</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="11">2033</option>
+                                <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="12">2034</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV :</label>
+                        <div>
+                            <input type="password" name="no." id="no." placeholder="CVV">
+                            <button class="add">Pay</button>
+                        </div>
+        
+                    </div>
+                </form>
+            </mat-drawer>
+        </mat-drawer-container>
+        <mat-drawer-container mode="up" class="top">
+            <mat-drawer style="background-color: aliceblue;" fxFlex autosize class="top1" #draw1 >
+                <form action="" class="form3">
+                    <label for="" >Muhammed Zayed</label>
+                    <div>
+                        <label for=""><b>XXXXXX9876</b></label>
+                    </div>
+                </form>
+            </mat-drawer>
+        </mat-drawer-container>
+    </form>
+</div>

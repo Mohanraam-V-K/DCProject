@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
+  update:boolean=false;
 email=sessionStorage.getItem('email')
 name=sessionStorage.getItem('name')
 address=sessionStorage.getItem('address')

@@ -1,7 +1,7 @@
 <div class="background">
 <form class="form">
 
-    <div id="im"><button class="press" >Update</button><button class="press1" >Delete</button></div>
+    <div id="im"><button class="press" (click)="update = !update" >Update</button><button class="press1" >Delete Account</button></div>
 
     <!-- <img src="pic.jpg" alt="" width="50" height="50"> -->
 
@@ -29,14 +29,17 @@
 
     </div>
 
-    <div id="k" style="transform: translate(50%,-62%);">
+    <div id="k" *ngIf="update" style="transform: translate(50%,-81%);">
 
-        <label style="font-size: x-large;" for="name">{{name}}</label>
+        <input type="text" name="name" for="name" placeholder="Enter Name">
     
         <br><br>
     
-        <label style="font-size: x-large;" for="gender">{{gender}}</label>
-    
+        <select class="input2" name="gender" id="gender">
+            <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="male">Male</option>
+            <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="female">Female</option>
+            <option style="background-color:rgb(58, 55, 55);color: aliceblue;" value="others">Others</option>
+        </select>    
         <br><br>
     
         <label style="font-size: x-large;margin-bottom: 3px;" for="email">{{email}}</label>
@@ -47,9 +50,51 @@
     
         <br><br>
     
-        <label style="font-size: x-large; width: 350px;line-height: 27px;" for="address">{{address}}</label>
+        <input type="text" name="name" for="name" placeholder="Enter Address">
     
         </div>
+        <!-- <div id="k" *ngIf="!update" style="transform: translate(50%,-62%);">
+
+            <label style="font-size: x-large;" for="name">Name1</label>
+        
+            <br><br>
+        
+            <label style="font-size: x-large;" for="gender">Gender</label>
+        
+            <br><br>
+        
+            <label style="font-size: x-large;margin-bottom: 3px;" for="email">Email</label>
+        
+            <br><br>
+        
+            <label for="phone;" style="font-size: x-large;">Phone</label>
+        
+            <br><br>
+        
+            <label style="font-size: x-large; width: 350px;line-height: 27px;" for="address">Address</label>
+        
+            </div> -->
+        <div id="k" style="transform: translate(50%,-81%);" *ngIf="!update">
+
+            <label style="font-size: x-large;" for="name">{{name}}</label>
+        
+            <br><br>
+        
+            <label style="font-size: x-large;" for="gender">{{gender}}</label>
+        
+            <br><br>
+        
+            <label style="font-size: x-large;margin-bottom: 3px;" for="email">{{email}}</label>
+        
+            <br><br>
+        
+            <label for="phone;" style="font-size: x-large;">{{phone}}</label>
+        
+            <br><br>
+        
+            <label style="font-size: x-large; width: 350px;line-height: 27px;" for="address">{{address}}</label>
+        
+            </div>
 
 </form></div>
 <router-outlet></router-outlet>

@@ -4,7 +4,7 @@
 
 
 
-<div class="lists" *ngIf="mobile" >
+<form class="lists" *ngIf="mobile" >
 
     <h2>Mobile</h2>
 
@@ -92,7 +92,7 @@
 
   </table>
 
-</div>
+</form>
 
 <div class="lists" *ngIf="internet">
 
@@ -252,7 +252,9 @@
 
             </tr>
 
-            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()">Buy</button>
+            <button class="press" style="transform: translate(80%,-30%);" (click)="Buy()" >Buy
+            </button>
+            
 
  
 
@@ -791,4 +793,8 @@
     </table>
 
 </div>
+
+
+
+
 </div>

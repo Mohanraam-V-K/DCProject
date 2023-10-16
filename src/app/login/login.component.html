@@ -53,7 +53,7 @@
 
   <label class="lab1" for="username">Username :</label>
 
-  <input class="input1" type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email or Username" id="username">
+  <input class="input1" type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email or Username" id="username" required>
 
   <label class="lab1" for="password">Password :</label>
 
@@ -105,7 +105,7 @@
 
   <label for="gender">Gender :</label>
 
-  <select class="input2" name="gender" id="gender" [(ngModel)]="signupobj.gender" >
+  <select class="input2" name="gender" id="gender" aria-placeholder="Male" [(ngModel)]="signupobj.gender" >
     <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="male">Male</option>
     <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="female">Female</option>
     <option style="background-color:rgb(58, 55, 55);color: aliceblue;" value="others">Others</option>
