@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { UserserviceService } from 'src/userservice.service';
 
 @Component({
   selector: 'app-page3',
@@ -8,7 +9,7 @@ import { Route, Router } from '@angular/router';
 })
 export class Page3Component {
 
-
+msg:any
 
 mobile:boolean=false;
 
@@ -31,8 +32,9 @@ plan23:boolean=false;
 plan24:boolean=false;
 
 obj:any;
+z: any;
 
-constructor(private router:Router){}
+constructor(private userservice:UserserviceService,private router:Router){}
 
 mobile1(){
 
@@ -628,4 +630,27 @@ this.router.navigate(['/customerpage/buyplan'])
 
 }
 
+name:string="";
+validity:string="";
+data:string="";
+amount:string="";
+id:string="";
+type:string="";
+talktime:string="";
+sms:string="";
+
+ngOnInit():void{
+  this.userservice.getallplans().subscribe((res)=>{
+    this.msg=res;
+    console.log(this.msg)
+    // this.validity=this.msg.plan;
+  })
+}
+  plandet(){
+    console.log(this.name);
+    if(this.plan11==false){
+      this.plan11=true
+    }
+    
+  }
 }

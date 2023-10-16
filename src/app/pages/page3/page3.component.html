@@ -3,7 +3,6 @@
     <button class="press" (click)="internet1()">Internet</button>
 
 
-
 <form class="lists" *ngIf="mobile" >
 
     <h2>Mobile</h2>
@@ -28,21 +27,21 @@
 
       <tbody>
 
-          <tr (click)="planm1()">
+          <tr  *ngFor="let k of msg.slice(4);let z=index" (click)="name = k.planName;validity = k.planValidity;data=k.data;amount=k.planAmount;id=k.planId;type=k.planType;sms=k.sms;talktime=k.talktime" (click)="plandet()" >
 
-              <th>1</th>
+              <th>{{z+1}}</th>
 
-              <td>CWC199</td>
+              <td>{{k.planName}}</td>
 
-              <td>28</td>
+              <td>{{k.planValidity}}</td>
 
-              <td>199.00</td>
+              <td>{{k.planAmount}}</td>
 
           </tr>
 
       </tbody>
 
-      <tbody>
+      <!-- <tbody>
 
           <tr (click)="planm2()" >
 
@@ -88,7 +87,7 @@
 
         </tr>
 
-    </tbody>
+    </tbody> -->
 
   </table>
 
@@ -118,21 +117,21 @@
 
         <tbody>
 
-            <tr (click)="plani1()">
+            <tr  *ngFor="let k of msg.slice(0,4);let z=index" (click)="name = k.planName;validity = k.planValidity;data=k.data;amount=k.planAmount;id=k.planId;type=k.planType;sms=k.sms;talktime=k.talktime" (click)="plandet()">
 
-                <th>1</th>
-
-                <td>1GB/day</td>
-
-                <td>28</td>
-
-                <td>209.00</td>
-
+                <th>{{z+1}}</th>
+  
+                <td>{{k.planName}}</td>
+  
+                <td>{{k.planValidity}}</td>
+  
+                <td>{{k.planAmount}}</td>
+  
             </tr>
 
         </tbody>
 
-        <tbody>
+        <!-- <tbody>
 
             <tr (click)="plani2()" >
 
@@ -178,7 +177,7 @@
 
           </tr>
 
-      </tbody>
+      </tbody> -->
 
     </table>
 
@@ -192,7 +191,7 @@
 
                 <th style="transform: translate(16%,0%);">ID :</th>
 
-                <td >M1001</td>
+                <td >{{id}}</td>
 
             </tr>
 
@@ -200,7 +199,7 @@
 
                 <th style="transform: translate(10%,0%);">Plan :</th>
 
-                <td>CWC199</td>
+                <td>{{name}}</td>
 
             </tr>
 
@@ -208,7 +207,7 @@
 
                 <th style="transform: translate(10%,0%);">Type :</th>
 
-                <td>Mobile</td>
+                <td>{{type}}</td>
 
             </tr>
 
@@ -216,7 +215,7 @@
 
                 <th style="transform: translate(10%,0%);">Data :</th>
 
-                <td>N/A</td>
+                <td>{{data}}</td>
 
             </tr>
 
@@ -224,7 +223,7 @@
 
                 <th>Talktime :</th>
 
-                <td>Unlimited Calls</td>
+                <td>{{talktime}}</td>
 
             </tr>
 
@@ -232,7 +231,7 @@
 
                 <th style="transform: translate(10%,0%);">SMS :</th>
 
-                <td>100 messages/day</td>
+                <td>{{sms}}</td>
 
             </tr>
 
@@ -240,7 +239,7 @@
 
                 <th style="transform: translate(3%,0%);">Validity :</th>
 
-                <td>28 Days</td>
+                <td>{{validity}}</td>
 
             </tr>
 
@@ -248,7 +247,7 @@
 
                 <th style="transform: translate(2%,0%);">Amount :</th>
 
-                <td>Rs 199.00</td>
+                <td>{{amount}}</td>
 
             </tr>
 

@@ -31,4 +31,7 @@ export class UserserviceService {
       addACustomer(signupobj:signup){
         return this.http.post("http://localhost:8080/api/v1/customer",signupobj,{responseType: 'text'});
        }
+       getallplans(){
+        return this.http.get("http://localhost:8080/api/v1/plans")
+       }
     }

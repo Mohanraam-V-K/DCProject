@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserserviceService } from 'src/userservice.service';
 
 @Component({
   selector: 'app-allplans',
@@ -27,8 +29,9 @@ plan23:boolean=false;
 plan24:boolean=false;
 
 obj:any;
+  msg: any;
 
- 
+constructor(private userservice:UserserviceService,private router:Router){}
 
 mobile1(){
 
@@ -617,5 +620,30 @@ plani4(){
 
   }  
 
+  
+
 }
+name:string="";
+validity:string="";
+data:string="";
+amount:string="";
+id:string="";
+type:string="";
+talktime:string="";
+sms:string="";
+
+ngOnInit():void{
+  this.userservice.getallplans().subscribe((res)=>{
+    this.msg=res;
+    console.log(this.msg)
+    // this.validity=this.msg.plan;
+  })
+}
+  plandet(){
+    console.log(this.name);
+    if(this.plan11==false){
+      this.plan11=true
+    }
+    
+  }
 }
