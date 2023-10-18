@@ -1,1 +1,54 @@
-<p>bills works!</p>
+<div class="background">
+    <form class="lists" #form1="ngForm">
+    
+      <table class="a">
+    
+          <thead>
+    
+              <tr>
+    
+                  <th>S.no</th>
+
+                  <th>Email</th>
+
+                  <th>Plan</th>
+    
+                  <th>Type</th>
+    
+                  <th>Validity</th>
+    
+                  <th>Amount</th>
+
+                  <th>Expiry Date</th>
+                  
+                  <th>Status</th>
+    
+              </tr>
+    
+          </thead>
+    
+          <tbody>
+    
+              <tr  *ngFor="let k of msg,let z=index" >
+    
+                  <th>{{z+1}}</th>
+
+                  <th>{{k.email}}</th>
+    
+                  <td>{{k.planName}}</td>
+    
+                  <td>{{k.plan_type}}</td>
+    
+                  <td>{{k.planDuration}}</td>
+                  <td>{{k.planAmount}}</td>
+                  <td>{{k.planDueDate.split('T')[0]}}</td>
+                  <td>{{k.planstatus}}</td>
+
+              </tr>
+    
+          </tbody>
+    
+      </table>
+    
+    </form>
+</div>

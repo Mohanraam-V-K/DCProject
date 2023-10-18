@@ -55,6 +55,8 @@ export class LoginComponent implements OnInit{
         sessionStorage.setItem('gender',this.getdata.gender)
         sessionStorage.setItem('name',this.getdata.customerName)
         sessionStorage.setItem('phone',this.getdata.phoneNumber)
+        sessionStorage.setItem('customerid',this.getdata.customerId)
+        sessionStorage.setItem('status',this.getdata.status)
         this.router.navigate(['/customerpage/home'])
       }
       else{

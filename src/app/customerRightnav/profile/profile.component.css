@@ -52,12 +52,13 @@
   
   .j{
   
-    transform: translate(10%,20%);
+    transform: translate(10%,-5%);
   
   }
   #k{
     /* width: 300px; */
     margin-left: -120px;
+    height: 205px;
   }
   
    

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { customerbill, customerbilldata } from 'src/signin';
 import { UserserviceService } from 'src/userservice.service';
 
 @Component({
@@ -17,21 +18,8 @@ internet:boolean=false;
 
 plan11:boolean=false;
 
-plan12:boolean=false;
-
-plan13:boolean=false;
-
-plan14:boolean=false;
-
-plan21:boolean=false;
-
-plan22:boolean=false;
-
-plan23:boolean=false;
-
-plan24:boolean=false;
-
 obj:any;
+
 z: any;
 
 constructor(private userservice:UserserviceService,private router:Router){}
@@ -44,19 +32,7 @@ mobile1(){
 
     this.plan11=false;
 
-    this.plan12=false;
 
-    this.plan13=false;
-
-    this.plan14=false;
-
-    this.plan21=false;
-
-    this.plan22=false;
-
-    this.plan23=false;
-
-    this.plan24=false;
 
   }
 
@@ -66,19 +42,6 @@ mobile1(){
 
     this.plan11=false;
 
-    this.plan12=false;
-
-    this.plan13=false;
-
-    this.plan14=false;
-
-    this.plan21=false;
-
-    this.plan22=false;
-
-    this.plan23=false;
-
-    this.plan24=false;
 
   }
 
@@ -98,20 +61,6 @@ internet1(){
 
     this.plan11=false;
 
-    this.plan12=false;
-
-    this.plan13=false;
-
-    this.plan14=false;
-
-    this.plan21=false;
-
-    this.plan22=false;
-
-    this.plan23=false;
-
-    this.plan24=false;
-
   }
 
   else{
@@ -119,20 +68,6 @@ internet1(){
     this.internet=false;
 
     this.plan11=false;
-
-    this.plan12=false;
-
-    this.plan13=false;
-
-    this.plan14=false;
-
-    this.plan21=false;
-
-    this.plan22=false;
-
-    this.plan23=false;
-
-    this.plan24=false;
 
   }
 
@@ -146,499 +81,24 @@ internet1(){
 
  
 
-planm1(){
 
-  if(this.plan11==false){
+form:boolean=false;
 
-    this.plan11=true;
-
-  }
-
-  else{
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan12==true){
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan13==true){
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan14==true){
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan21==true){
-
-    this.plan21=false;
-
-  }
-
-  if(this.plan22==true){
-
-    this.plan22=false;
-
-  }
-
-  if(this.plan23==true){
-
-    this.plan23=false;
-
-  }
-
-  if(this.plan24==true){
-
-    this.plan24=false;
-
-  }
-
-}
-
- 
-
-planm2(){
-
-  if(this.plan12==false){
-
-    this.plan12=true;
-
-  }
-
-  else{
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan11==true){
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan13==true){
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan14==true){
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan21==true){
-
-    this.plan21=false;
-
-  }
-
-  if(this.plan22==true){
-
-    this.plan22=false;
-
-  }
-
-  if(this.plan23==true){
-
-    this.plan23=false;
-
-  }
-
-  if(this.plan24==true){
-
-    this.plan24=false;
-
-  }  
-
-}
-
- 
-
-planm3(){
-
-  if(this.plan13==false){
-
-    this.plan13=true;
-
-  }
-
-  else{
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan12==true){
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan11==true){
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan14==true){
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan21==true){
-
-    this.plan21=false;
-
-  }
-
-  if(this.plan22==true){
-
-    this.plan22=false;
-
-  }
-
-  if(this.plan23==true){
-
-    this.plan23=false;
-
-  }
-
-  if(this.plan24==true){
-
-    this.plan24=false;
-
-  }  
-
-}
-
- 
-
-planm4(){
-
-  if(this.plan14==false){
-
-    this.plan14=true;
-
-  }
-
-  else{
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan12==true){
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan13==true){
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan11==true){
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan21==true){
-
-    this.plan21=false;
-
-  }
-
-  if(this.plan22==true){
-
-    this.plan22=false;
-
-  }
-
-  if(this.plan23==true){
-
-    this.plan23=false;
-
-  }
-
-  if(this.plan24==true){
-
-    this.plan24=false;
-
-  }  
-
-}
-
- 
-
-plani1(){
-
-  if(this.plan21==false){
-
-    this.plan21=true;
-
-  }
-
-  else{
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan12==true){
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan13==true){
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan14==true){
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan11==true){
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan22==true){
-
-    this.plan22=false;
-
-  }
-
-  if(this.plan23==true){
-
-    this.plan23=false;
-
-  }
-
-  if(this.plan24==true){
-
-    this.plan24=false;
-
-  }  
-
-}
-
- 
-
-plani2(){
-
-  if(this.plan22==false){
-
-    this.plan22=true;
-
-  }
-
-  else{
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan12==true){
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan13==true){
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan14==true){
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan21==true){
-
-    this.plan21=false;
-
-  }
-
-  if(this.plan11==true){
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan23==true){
-
-    this.plan23=false;
-
-  }
-
-  if(this.plan24==true){
-
-    this.plan24=false;
-
-  }  
-
-}
-
- 
-
-plani3(){
-
-  if(this.plan23==false){
-
-    this.plan23=true;
-
-  }
-
-  else{
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan12==true){
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan13==true){
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan14==true){
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan21==true){
-
-    this.plan21=false;
-
-  }
-
-  if(this.plan22==true){
-
-    this.plan22=false;
-
-  }
-
-  if(this.plan11==true){
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan24==true){
-
-    this.plan24=false;
-
-  }  
-
-}
-
- 
-
-plani4(){
-
-  if(this.plan24==false){
-
-    this.plan24=true;
-
-  }
-
-  else{
-
-    this.plan11=false;
-
-  }
-
-  if(this.plan12==true){
-
-    this.plan12=false;
-
-  }
-
-  if(this.plan13==true){
-
-    this.plan13=false;
-
-  }
-
-  if(this.plan14==true){
-
-    this.plan14=false;
-
-  }
-
-  if(this.plan21==true){
-
-    this.plan21=false;
-
-  }
-
-  if(this.plan22==true){
-
-    this.plan22=false;
-
-  }
-
-  if(this.plan23==true){
-
-    this.plan23=false;
-
-  }
-
-  if(this.plan11==true){
-
-    this.plan11=false;
-
-  }  
-
-}
-
-Buy(){
-this.router.navigate(['/customerpage/buyplan'])
- 
-
-}
 
 name:string="";
-validity:string="";
+validity:number;
 data:string="";
 amount:string="";
 id:string="";
 type:string="";
 talktime:string="";
 sms:string="";
-
+due:any
+cusplanobj:customerbill=new customerbill("");
+customerbillobj:customerbilldata=new customerbilldata()
+msg1:any
+draw:boolean=false;
+draw1:boolean=false;
 ngOnInit():void{
   this.userservice.getallplans().subscribe((res)=>{
     this.msg=res;
@@ -652,5 +112,91 @@ ngOnInit():void{
       this.plan11=true
     }
     
+  }
+
+popup(){
+  if (this.form==false){
+    this.form=true;
+  }
+  else{
+    this.form=false;
+  }
+}
+
+  Buy(){
+    
+  if(sessionStorage.getItem("status")=="active"){
+  var today = new Date();
+  var startDate = new Date();
+  console.log(today)
+  startDate.setDate(today.getDate() + this.validity);
+  let val=startDate.toISOString().split('T')[0]+"T09:00:00";
+  this.customerbillobj.email=sessionStorage.getItem("email");
+  this.customerbillobj.customerId=sessionStorage.getItem("customerid");
+      this.customerbillobj.email=sessionStorage.getItem("email");
+      this.customerbillobj.planAmount=this.amount
+      this.customerbillobj.planDueDate=val
+      this.customerbillobj.planDuration=this.validity
+      this.customerbillobj.planName=this.name
+      this.customerbillobj.plan_type=this.type
+      console.log(this.customerbillobj)
+      this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res1)=>{
+        console.log(res1)
+      alert(res1)})}
+//   this.userservice.getplanofthecustomer(this.customerbillobj).subscribe((res1)=>{
+//     if(res1!=null){
+//     this.msg1=res1
+//     this.due=this.msg1.planDueDate
+//     let duedate=this.due
+//     var date = new Date(duedate)
+//     var today1=new Date()
+//     let todaydate=today1.toISOString().split('T')[0]+"T09:00:00";
+//     var todaysdate=new Date(todaydate)
+//     console.log(date)
+//     console.log(todaysdate)
+//     let adiff=date.getTime()-todaysdate.getTime()
+//     let diff=adiff/(1000 * 60 * 60 * 24);
+//     console.log(diff)
+//     if(diff<=0 && diff>-10){
+//       this.customerbillobj.customerId=sessionStorage.getItem("customerid");
+//       this.customerbillobj.email=sessionStorage.getItem("email");
+//       this.customerbillobj.planAmount=this.amount
+//       this.customerbillobj.planDueDate=val
+//       this.customerbillobj.planDuration=this.validity
+//       this.customerbillobj.planName=this.name
+//       this.customerbillobj.plan_type=this.type
+
+//       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res2)=>{
+//         console.log(res2)
+//         console.log(diff)
+//         alert("recharge successfull")
+//       })
+
+//     }
+//     else if(diff<-10) {
+//       alert("your account has been suspended")
+//     }
+//     else if(diff>0){
+//       alert("your plan is valid till "+diff+" days")
+//     }
+//   }
+//   else{
+//     this.customerbillobj.customerId=sessionStorage.getItem("customerid");
+//       this.customerbillobj.email=sessionStorage.getItem("email");
+//       this.customerbillobj.planAmount=this.amount
+//       this.customerbillobj.planDueDate=val
+//       this.customerbillobj.planDuration=this.validity
+//       this.customerbillobj.planName=this.name
+//       this.customerbillobj.plan_type=this.type
+//       console.log(this.customerbillobj)
+//       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res1)=>{
+//         console.log(res1)
+//       alert(res1)})
+//   }
+//   })  
+// }
+else{
+  alert("your account is suspended because of inactivity")
+}
   }
 }

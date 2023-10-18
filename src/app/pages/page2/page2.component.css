@@ -324,3 +324,14 @@
     margin-left: 40rem ;
   
   }
+
+  .l{
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+  .l label{
+    color: red;
+    font-size: larger;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }

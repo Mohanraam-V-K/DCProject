@@ -79,15 +79,15 @@ export class addacustomer{
     planName:any
     planDuration:any
     planDueDate:any
-    constructor(customerId:any,email:any,plan_type:any,planAmount:any,planName:any,planDuration:any,planDueDate:any){
-        this.customerId=customerId
-        this.email=email
-        this.plan_type=plan_type
-        this.planAmount=planAmount
-        this.planName=planName
-        this.planDuration=planDuration
-        this.planDueDate=planDueDate
-    }
+    // constructor(customerId:any,email:any,plan_type:any,planAmount:any,planName:any,planDuration:any,planDueDate:any){
+    //     this.customerId=customerId
+    //     this.email=email
+    //     this.plan_type=plan_type
+    //     this.planAmount=planAmount
+    //     this.planName=planName
+    //     this.planDuration=planDuration
+    //     this.planDueDate=planDueDate
+    // }
  }
 
  export class signup{
@@ -109,3 +109,25 @@ export class addacustomer{
     }
  }
 
+export class report{
+    category:any
+    customeremail:any
+    date:any
+    description:any
+    // constructor(category:any,customeremail:any,date:any,description:any){
+    //     this.category=category
+    //     this.customeremail=customeremail
+    //     this.date=date
+    //     this.description=description
+    // }
+}
+
+export class update{
+    customerName:any
+    address:any
+    email:any
+}
+
+export class billmail{
+    email:any
+}

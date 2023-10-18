@@ -19,6 +19,7 @@ export class Page2Component {
   duration:any;
   amount:any;
   due:any;
+  show:boolean=false;
 
   // cusobj:customerbilldata=new customerbilldata("","","","","","","")
   cusplanobj:customerbill=new customerbill("");
@@ -27,6 +28,8 @@ export class Page2Component {
   ngOnInit():void{
     this.cusplanobj.email=sessionStorage.getItem("email");
     this.userservice.getplanofacustomer(this.cusplanobj).subscribe((res)=>{
+      if(res!=null){
+        this.show=true
       this.msg=res
       this.rout=this.msg
       console.log(this.rout)
@@ -37,6 +40,18 @@ export class Page2Component {
       this.amount=this.msg.planAmount
       this.due=this.msg.planDueDate
       console.log(this.customerid)
+      }
+      else{
+        this.show=false
+      }
     })
+  }
+  recharge(){
+    if(this.show==false){
+      this.router.navigate(['/customerpage/allplans'])
+    }
+    else{
+      alert('Avtive Plan Exists')
+    }
   }
 }

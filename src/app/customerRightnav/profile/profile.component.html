@@ -1,7 +1,7 @@
 <div class="background">
 <form class="form">
 
-    <div id="im"><button class="press" (click)="update = !update" >Update</button><button class="press1" >Delete Account</button></div>
+    <div id="im"><button class="press" (click)="up = !up" >Update</button><button class="press1" >Delete Account</button></div>
 
     <!-- <img src="pic.jpg" alt="" width="50" height="50"> -->
 
@@ -29,13 +29,15 @@
 
     </div>
 
-    <div id="k" *ngIf="update" style="transform: translate(50%,-81%);">
+    <div id="k" *ngIf="up" style="transform: translate(50%,-101%);">
 
-        <input style="transform: translate(0%,-180%); border-radius: 5px; border: 1px solid;" type="text" name="name" for="name" placeholder="Enter Name">
+        <input style="transform: translate(0%,-20%); border-radius: 5px; border: 1px solid;" type="text" name="name" for="name" placeholder="Enter Name" [(ngModel)]="updateobj.customerName">
     
         <br><br>
     
+        <label style="font-size: x-large;" for="gender">{{gender}}</label>
         
+            <br><br>
     
         <label style="font-size: x-large;margin-bottom: 3px;" for="email">{{email}}</label>
     
@@ -45,8 +47,9 @@
     
         <br><br>
     
-        <input style="transform: translate(0%,40%); border-radius: 5px; border: 1px solid;" type="text" name="name" for="name" placeholder="Enter Address">
-    
+        <input style="transform: translate(0%,-10%); border-radius: 5px; border: 1px solid;" type="text" name="name" for="name" placeholder="Enter Address" [(ngModel)]="updateobj.address">
+        <button class="press" style="transform: translate(-500%,90%);" (click)="submit()">Submit</button>
+
         </div>
         <!-- <div id="k" *ngIf="!update" style="transform: translate(50%,-62%);">
 
@@ -69,7 +72,7 @@
             <label style="font-size: x-large; width: 350px;line-height: 27px;" for="address">Address</label>
         
             </div> -->
-        <div id="k" style="transform: translate(50%,-81%);" *ngIf="!update">
+        <div id="k" style="transform: translate(50%,-101%);" *ngIf="!up">
 
             <label style="font-size: x-large;" for="name">{{name}}</label>
         
@@ -90,6 +93,5 @@
             <label style="font-size: x-large; width: 350px;line-height: 27px;" for="address">{{address}}</label>
         
             </div>
-
 </form></div>
 <router-outlet></router-outlet>

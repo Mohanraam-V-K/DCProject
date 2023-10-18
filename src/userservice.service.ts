@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { addacustomer, changepassword, customer, getacustomerbill, login, signup } from './signin';
+import { addacustomer, billmail, changepassword, customer, customerbill, customerbilldata, getacustomerbill, login, report, signup, update } from './signin';
 
 @Injectable({
   providedIn: 'root'
@@ -26,12 +26,38 @@ export class UserserviceService {
       return this.http.get("http://localhost:8080/api/v1/customer");
      }
      getplanofacustomer(cusplanobj:getacustomerbill){
-       return this.http.get("http://localhost:8080/api/v1/bill/"+cusplanobj.email,{responseType: 'json'});
+       return this.http.get("http://localhost:8080/api/v1/bill/"+cusplanobj.email);
       }
       addACustomer(signupobj:signup){
         return this.http.post("http://localhost:8080/api/v1/customer",signupobj,{responseType: 'text'});
        }
        getallplans(){
         return this.http.get("http://localhost:8080/api/v1/plans")
+       }
+       report(reportobj:report){
+        return this.http.post("http://localhost:8080/api/v1/report",reportobj,{responseType: 'text'})
+       }
+       getallreport(){
+        return this.http.get("http://localhost:8080/api/v1/report")
+       }
+
+       addplanforcustomer(customerbillobj:customerbill){
+        return this.http.post("http://localhost:8080/api/v1/bill",customerbillobj,{responseType: 'text'})
+       }
+
+       getplanofthecustomer(customerbillobj:customerbilldata){
+        return this.http.get("http://localhost:8080/api/v1/bill/"+customerbillobj.email);
+       }
+
+       updateprofile(updateobj:update){
+        return this.http.put("http://localhost:8080/api/v1/customer/updateprofile",updateobj,{responseType: 'text'})
+       }
+       
+       getmybillhistory(billmailobj:billmail){
+        return this.http.get("http://localhost:8080/api/v1/history/"+billmailobj.email);
+       }
+
+       getallbillshistory(){
+        return this.http.get("http://localhost:8080/api/v1/history")
        }
     }

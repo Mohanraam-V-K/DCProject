@@ -1,1 +1,54 @@
-<p>reports works!</p>
+<div class="background">
+<div class="lists"  >
+
+
+  <table class="a">
+
+      <thead>
+
+          <tr>
+
+              <th>ID</th>
+
+              <th>Email</th>
+
+              <th>Catogory</th>
+
+              <th>Description</th>
+
+              <th>Date</th>
+
+              <th>Status</th>
+
+              <th>Action</th>
+
+          </tr>
+
+      </thead>
+
+      <tbody>
+
+
+        <tr *ngFor="let i of msg,let j=index">
+            <th>{{j+1}}</th>
+
+            <td>{{i.customeremail}}</td>
+
+            <td>{{i.category}}</td>
+
+            <td>{{i.description}}</td>
+
+            <td>{{i.date}}</td>
+
+            <td>{{i.status}}</td>
+
+            <td><button class="b"><mat-icon style="color: white;">check</mat-icon></button><button class="c"><mat-icon style="color: white;">close</mat-icon></button></td>
+
+        </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+</div>
