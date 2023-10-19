@@ -42,7 +42,7 @@
 
             <td>{{i.status}}</td>
 
-            <td><button class="b"><mat-icon style="color: white;">check</mat-icon></button><button class="c"><mat-icon style="color: white;">close</mat-icon></button></td>
+            <td><button class="b" (click)="email = i.customeremail" (click)="yes()" ><mat-icon style="color: white;">check</mat-icon></button><button class="c" (click)="no()" (click)="email = i.customeremail"><mat-icon style="color: white;">close</mat-icon></button></td>
 
         </tr>
 

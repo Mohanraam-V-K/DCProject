@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { addacustomer, billmail, changepassword, customer, customerbill, customerbilldata, getacustomerbill, login, report, signup, update } from './signin';
+import { addacustomer, billmail, changepassword, customer, customerbill, customerbilldata, getacustomerbill, login, report, reportacc, signup, update } from './signin';
 
 @Injectable({
   providedIn: 'root'
@@ -63,5 +63,13 @@ export class UserserviceService {
 
        getallbills(){
         return this.http.get("http://localhost:8080/api/v1/bill")
+       }
+
+       yesreport(reportaccobj:reportacc){
+        return this.http.get("http://localhost:8080/api/v1/report/yes/"+reportaccobj.email)
+       }
+
+       noreport(reportaccobj:reportacc){
+        return this.http.get("http://localhost:8080/api/v1/report/no/"+reportaccobj.email)
        }
     }

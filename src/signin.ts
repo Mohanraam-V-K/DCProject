@@ -133,3 +133,7 @@ export class update{
 export class billmail{
     email:any
 }
+
+export class reportacc{
+    email:any
+}
