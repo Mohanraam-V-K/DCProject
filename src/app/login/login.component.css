@@ -390,6 +390,13 @@ input{
 
 }
 
+.dorm2 textarea{
+    border-radius: 3px;
+    height: 250px;
+    width: 323px;
+    color: #080710;
+}
+
 .font{
 
     margin-top: 20px;
@@ -530,7 +537,7 @@ h3{
 
 #b{
 
-    margin-top: 50px;
+    margin-top: 30px;
 
     width: 100%;
 
@@ -609,7 +616,7 @@ h3{
 
 }
 
- 
+
 
  
 

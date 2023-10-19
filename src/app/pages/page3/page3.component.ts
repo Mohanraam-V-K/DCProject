@@ -131,8 +131,45 @@ popup(){
   console.log(today)
   startDate.setDate(today.getDate() + this.validity);
   let val=startDate.toISOString().split('T')[0]+"T09:00:00";
-  this.customerbillobj.email=sessionStorage.getItem("email");
-  this.customerbillobj.customerId=sessionStorage.getItem("customerid");
+  this.userservice.getplanofthecustomer(this.customerbillobj).subscribe((res1)=>{
+    if(res1!=null){
+    this.msg1=res1
+    this.due=this.msg1.planDueDate
+    let duedate=this.due
+    var date = new Date(duedate)
+    var today1=new Date()
+    let todaydate=today1.toISOString().split('T')[0]+"T09:00:00";
+    var todaysdate=new Date(todaydate)
+    console.log(date)
+    console.log(todaysdate)
+    let adiff=date.getTime()-todaysdate.getTime()
+    let diff=adiff/(1000 * 60 * 60 * 24);
+    console.log(diff)
+    if(diff<=0 && diff>-10){
+      this.customerbillobj.customerId=sessionStorage.getItem("customerid");
+      this.customerbillobj.email=sessionStorage.getItem("email");
+      this.customerbillobj.planAmount=this.amount
+      this.customerbillobj.planDueDate=val
+      this.customerbillobj.planDuration=this.validity
+      this.customerbillobj.planName=this.name
+      this.customerbillobj.plan_type=this.type
+
+      this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res2)=>{
+        console.log(res2)
+        console.log(diff)
+        alert("recharge successfull")
+      })
+
+    }
+    else if(diff<-10) {
+      alert("your account has been suspended")
+    }
+    else if(diff>0){
+      alert("your plan is valid till "+diff+" days")
+    }
+  }
+  else{
+    this.customerbillobj.customerId=sessionStorage.getItem("customerid");
       this.customerbillobj.email=sessionStorage.getItem("email");
       this.customerbillobj.planAmount=this.amount
       this.customerbillobj.planDueDate=val
@@ -142,59 +179,10 @@ popup(){
       console.log(this.customerbillobj)
       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res1)=>{
         console.log(res1)
-      alert(res1)})}
-//   this.userservice.getplanofthecustomer(this.customerbillobj).subscribe((res1)=>{
-//     if(res1!=null){
-//     this.msg1=res1
-//     this.due=this.msg1.planDueDate
-//     let duedate=this.due
-//     var date = new Date(duedate)
-//     var today1=new Date()
-//     let todaydate=today1.toISOString().split('T')[0]+"T09:00:00";
-//     var todaysdate=new Date(todaydate)
-//     console.log(date)
-//     console.log(todaysdate)
-//     let adiff=date.getTime()-todaysdate.getTime()
-//     let diff=adiff/(1000 * 60 * 60 * 24);
-//     console.log(diff)
-//     if(diff<=0 && diff>-10){
-//       this.customerbillobj.customerId=sessionStorage.getItem("customerid");
-//       this.customerbillobj.email=sessionStorage.getItem("email");
-//       this.customerbillobj.planAmount=this.amount
-//       this.customerbillobj.planDueDate=val
-//       this.customerbillobj.planDuration=this.validity
-//       this.customerbillobj.planName=this.name
-//       this.customerbillobj.plan_type=this.type
-
-//       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res2)=>{
-//         console.log(res2)
-//         console.log(diff)
-//         alert("recharge successfull")
-//       })
-
-//     }
-//     else if(diff<-10) {
-//       alert("your account has been suspended")
-//     }
-//     else if(diff>0){
-//       alert("your plan is valid till "+diff+" days")
-//     }
-//   }
-//   else{
-//     this.customerbillobj.customerId=sessionStorage.getItem("customerid");
-//       this.customerbillobj.email=sessionStorage.getItem("email");
-//       this.customerbillobj.planAmount=this.amount
-//       this.customerbillobj.planDueDate=val
-//       this.customerbillobj.planDuration=this.validity
-//       this.customerbillobj.planName=this.name
-//       this.customerbillobj.plan_type=this.type
-//       console.log(this.customerbillobj)
-//       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res1)=>{
-//         console.log(res1)
-//       alert(res1)})
-//   }
-//   })  
-// }
+      alert(res1)})
+  }
+  })  
+}
 else{
   alert("your account is suspended because of inactivity")
 }

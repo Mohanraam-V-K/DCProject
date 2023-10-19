@@ -41,6 +41,7 @@ export class CustomerlistComponent {
   }
   planlist:boolean=false;
 name:string="";
+custname:string="";
   email(){
     this.cusplanobj.email=this.name
     this.userservice.getplanofacustomer(this.cusplanobj).subscribe((res1)=>{
@@ -56,5 +57,21 @@ name:string="";
     })
     if(this.planlist==false)
       {this.planlist=true;}
+  }
+  searchTerm: string = '';
+
+  filteredItems: any[] = [];
+
+ 
+
+  filterItems() {
+
+    this.filteredItems = this.rout.filter(rout =>
+
+      rout.customerName.toLowerCase().includes(this.searchTerm.toLowerCase())
+
+    );
+    console.log(this.rout+"rout");
+
   }
   }

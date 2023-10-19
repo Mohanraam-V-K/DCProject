@@ -1,5 +1,5 @@
 <div class="search">
-    <input type="search"/>
+    <input [(ngModel)]="searchTerm" (input)="filterItems()" placeholder="Search by name..."  type="search">
     <button mat-button><mat-icon style="transform: scale(1.3);">search</mat-icon></button>
 
 
@@ -27,7 +27,7 @@
       </thead>
       <tbody>
 
-        <tr *ngFor="let k of rout, let z=index" id="b" (click)="name = k.email"  (click)="email()">
+        <tr *ngFor="let k of filteredItems, let z=index" id="b" (click)="name = k.email" (click)="email()">
   
           <td>{{z+1}}</td>
   

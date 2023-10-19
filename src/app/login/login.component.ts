@@ -8,7 +8,7 @@ import { UserserviceService } from 'src/userservice.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-  isRegister:boolean=false;
+  isRegister:boolean=true;
   title = 'proj';
   msg:any;
   msg1:any;
@@ -18,7 +18,11 @@ export class LoginComponent implements OnInit{
   getdata1:any;
   getdata2:any;
   signupobj:signup=new signup("","","","","","","")
-  signups:boolean=false
+  signups:boolean=false;
+  next:boolean=false;
+  button:boolean=false;
+  terms:boolean=false;
+  pass:boolean=false;
   constructor(private userservice:UserserviceService,private router:Router){
   }
   ngOnInit(){
@@ -29,6 +33,14 @@ export class LoginComponent implements OnInit{
     this.userobj1.email=this.userobj.username
     let reg=this.userservice.register(this.userobj1)
     reg.subscribe((data)=>this.msg=data)
+  }
+  check(){
+    if (this.button==false){
+      this.button=true
+    }
+    else{
+      this.button=false
+    }
   }
   loginnow(){
     if(this.userobj.username=="admin"){
@@ -66,7 +78,7 @@ export class LoginComponent implements OnInit{
   }   
 } 
 
-  signup(){
+  terms1(){
       if(this.signupobj.customerName!=""){
         if(this.signupobj.email!=""){
           if(this.signupobj.phoneNumber!=""){
@@ -74,17 +86,7 @@ export class LoginComponent implements OnInit{
               if(this.signupobj.password!=""){
                 if(this.signupobj.password==this.signupobj.cpassword){
                   if(this.signupobj.gender!="")
-                this.userservice.addACustomer(this.signupobj).subscribe((data)=>{
-                  if(data=="Created"){
-                    alert("Added successfully")
-                  }
-                  else if(data=="Already Exist"){
-                    alert("Customer already exists")
-                  }
-                  else if(data=="No values"){
-                    alert("error")
-                  } 
-                })
+                  {this.terms=true;this.signups=false}
               else{
                 alert("select a gender")
               }
@@ -116,5 +118,20 @@ export class LoginComponent implements OnInit{
       else{
         alert("Customer name cant be empty")
       }
+  }
+
+  signup(){
+    
+    this.userservice.addACustomer(this.signupobj).subscribe((data)=>{
+      if(data=="Created"){
+        alert("Added successfully")
+      }
+      else if(data=="Already Exist"){
+        alert("Customer already exists")
+      }
+      else if(data=="No values"){
+        alert("error")
+      } 
+    })
   }
   }

@@ -46,8 +46,8 @@
 
 <div class="background">
 
-</div>
-<form class="dorm2" *ngIf="!isRegister">
+
+<form class="dorm2" *ngIf="isRegister==true">
   
   <h3>Sign in</h3>
 
@@ -63,12 +63,12 @@
 
   <button id="b"  (click)="loginnow()">Sign In</button>
   
-  <p class="font" (click)="isRegister = !isRegister">Forgot Password ?</p>
-  <p class="font" (click)="signups = !signups">Sign Up</p>
+  <p class="font" (click)="pass = true" (click)="isRegister = false">Forgot Password ?</p>
+  <p class="font" (click)="signups = true" (click)="isRegister = false">Sign Up</p>
 
 </form>
 
-<form class="dorm2" *ngIf="isRegister">
+<form class="dorm2" *ngIf="pass==true">
 
   <h3>Forgot Password</h3>
 
@@ -84,10 +84,10 @@
 
   <button id="b"  (click)="loginnow()" routerLink="login">Confirm</button>
 
-  <p class="font" (click)="isRegister = !isRegister">Sign in</p>
+  <p class="font" (click)="isRegister = true" (click)="pass = false">Sign in</p>
 
 </form>
-<form class="dorm1" *ngIf="signups">
+<form class="dorm1" *ngIf="signups==true">
 
   <h3>Sign up</h3>
 
@@ -126,9 +126,49 @@
 
   <a href style="transform: translate(230%,-1400%); color: aliceblue;" for="cpassword">Confirm Password :</a>
 
-  <button id="b" style="transform: translate(0%,-450%);" (click)="signup()">Sign up</button>
+  <button id="b" style="transform: translate(0%,-450%);" (click)="terms1()">Next</button>
 
-  <p class="font" style="transform: translate(0%,-1200%);" (click)="signups = !signups">Sign in</p>
+  <p class="font" style="transform: translate(0%,-1200%);" (click)="isRegister = true" (click)="signups = false">Sign in</p>
 
 </form>
+<form class="dorm2" name="form" *ngIf="terms==true">
+
+ 
+
+  <h3>Terms and Conditions</h3>
+
+ 
+
+  <textarea name="" id="" cols="30" rows="10">
+    By using this website, you agree to these terms and conditions
+    - Users may be required to create accounts for certain services.
+    - Users are responsible for maintaining the confidentiality of their account information.
+    - We strive to maintain network services but do not guarantee uninterrupted service.
+    - We may suspend or terminate services at our discretion.
+    - Users must use our services in compliance with applicable laws.
+    - Users must not engage in any unauthorized or illegal activities.
+    - Refer to our Privacy Policy for information on how we collect and handle user data.
+    - All content on this website is protected by intellectual property laws.
+    - We are not liable for any damages resulting from the use or inability to use our services.
+    - We may terminate user accounts for any violation of these terms.
+    - These terms are governed by the laws of .
+    - We reserve the right to modify these terms at any time.
+    - Provide your company's contact information for users to get in touch.
+    - If any provision of these terms is found to be unenforceable, the remaining provisions will remain in effect.
+    - These terms constitute the entire agreement between the user and DC Telecom Services.</textarea>
+    <label for="" style="color: white;">Agree</label><input style="margin-left: 3px;" type="checkbox" name="check" value="a" (click)="check()" >
+
+ 
+
+  <button id="b" type="button"  (click)="signup()" *ngIf="button == true" >Sign Up</button>
+
+ 
+
+  <p class="font" (click)="signups = true" (click)="terms = false">back</p>
+
+ 
+
+</form>
+
+</div>
 <router-outlet></router-outlet>
