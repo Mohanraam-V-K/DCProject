@@ -79,6 +79,8 @@ export class addacustomer{
     planName:any
     planDuration:any
     planDueDate:any
+    customerphone:any
+    planstatus:any
     // constructor(customerId:any,email:any,plan_type:any,planAmount:any,planName:any,planDuration:any,planDueDate:any){
     //     this.customerId=customerId
     //     this.email=email

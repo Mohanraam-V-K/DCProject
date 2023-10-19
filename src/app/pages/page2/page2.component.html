@@ -55,7 +55,7 @@
 <div class="background">
   <div class="lists1">
 
-    <table class="b" *ngIf="show">
+    <table class="b" *ngIf="show" id="my-table">
         <!-- <tbody *ngFor="let k of rout"> -->
             
 
@@ -111,7 +111,8 @@
     </table>
 
 </div>
-<button class="press" (click)="recharge()">Recharge</button>
+<button class="press" (click)="recharge()">Recharge</button><button *ngIf="show" class="press" style="margin-left: 10px;" (click)="download()">Download</button>
+
 
 <div class="l" *ngIf="!show"><label for=""><b>No Active Plans</b></label></div>
 

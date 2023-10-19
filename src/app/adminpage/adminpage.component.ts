@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { UserserviceService } from 'src/userservice.service';
 @Component({
   selector: 'app-adminpage',
@@ -13,7 +14,18 @@ constructor(private cd:ChangeDetectorRef,private router:Router,private userservi
 ngDoCheck():void {
   this.cd.markForCheck();
 }
+private loggedIn = new BehaviorSubject<boolean>(false);
+
+ 
+
+  get isLoggedIn() {
+
+    return this.loggedIn.asObservable();
+
+  }
 logout(){
+  this.loggedIn.next(false);
+
   this.router.navigate(["/"],{replaceUrl:true});
 }
 }

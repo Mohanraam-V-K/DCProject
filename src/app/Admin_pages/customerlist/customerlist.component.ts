@@ -31,11 +31,13 @@ export class CustomerlistComponent {
     // })
 
   }
+  filteredItems: any[] = [];
 
   ngOnInit():void{
     this.userservice.getAllCustomer().subscribe((res)=>{
       this.msg=res
       this.rout= this.msg;
+      this.filteredItems=this.rout
     })
     
   }
@@ -60,7 +62,6 @@ custname:string="";
   }
   searchTerm: string = '';
 
-  filteredItems: any[] = [];
 
  
 

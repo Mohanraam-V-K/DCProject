@@ -165,7 +165,9 @@
     
      
     
-     
+     .a{
+        width: 300px;
+     }
     
      
     
@@ -289,7 +291,7 @@
     
      
     
-    table tr:hover{
+   table tbody tr:hover{
     
      
     

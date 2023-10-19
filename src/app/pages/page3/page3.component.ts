@@ -113,22 +113,34 @@ ngOnInit():void{
     }
     
   }
-
+wes:any
+wes1:any
 popup(){
   this.customerbillobj.email=sessionStorage.getItem('email')
+  this.customerbillobj.customerphone=sessionStorage.getItem('phone')
   this.userservice.getplanofthecustomer(this.customerbillobj).subscribe((res2)=>{
+    this.wes=res2
     if(res2==null){
-    if (this.form==false){
-      this.form=true;
-    }
-    else{
-      this.form=false;
-    }
-  }
-  else{
-    alert("Active plan exists")
-  }
-  })
+      if (this.form==false){
+        this.form=true;
+        }
+        else{
+        this.form=false;
+        }
+      }
+    else if(this.wes.planstatus=="plan expired"){
+      if (this.form==false){
+        this.form=true;
+        }
+        else{
+        this.form=false;
+            }
+        }       
+          else{
+          alert("Active plan exists")
+          }
+        })
+
  
 }
 
@@ -142,33 +154,28 @@ popup(){
   startDate.setDate(today.getDate() + this.validity);
   let val=startDate.toISOString().split('T')[0]+"T09:00:00";
   this.userservice.getplanofthecustomer(this.customerbillobj).subscribe((res1)=>{
-    console.log(this.customerbillobj.email+"ASDASDASDASDASd")
-    console.log(res1+"!@#!@#!@#")
+    this.wes1=res1
     if(res1!=null){
-    this.msg1=res1
-    this.due=this.msg1.planDueDate
-    let duedate=this.due
-    var date = new Date(duedate)
-    var today1=new Date()
-    let todaydate=today1.toISOString().split('T')[0]+"T09:00:00";
-    var todaysdate=new Date(todaydate)
-    console.log(date)
-    console.log(todaysdate)
-    let adiff=date.getTime()-todaysdate.getTime()
-    let diff=adiff/(1000 * 60 * 60 * 24);
-    console.log(diff)
-    if(diff<=0 && diff>-10){
-      this.customerbillobj.customerId=sessionStorage.getItem("customerid");
-      this.customerbillobj.email=sessionStorage.getItem("email");
-      this.customerbillobj.planAmount=this.amount
-      this.customerbillobj.planDueDate=val
-      this.customerbillobj.planDuration=this.validity
-      this.customerbillobj.planName=this.name
-      this.customerbillobj.plan_type=this.type
+        if(this.wes1.planstatus!="active plan"){
+        this.msg1=res1
+        this.due=this.msg1.planDueDate
+        let duedate=this.due
+        var date = new Date(duedate)
+        var today1=new Date()
+        let todaydate=today1.toISOString().split('T')[0]+"T09:00:00";
+        var todaysdate=new Date(todaydate)
+        let adiff=date.getTime()-todaysdate.getTime()
+        let diff=adiff/(1000 * 60 * 60 * 24);
+        if(diff<=0.9 && diff>-10){
+        this.customerbillobj.customerId=sessionStorage.getItem("customerid");
+        this.customerbillobj.email=sessionStorage.getItem("email");
+        this.customerbillobj.planAmount=this.amount
+        this.customerbillobj.planDueDate=val
+        this.customerbillobj.planDuration=this.validity
+        this.customerbillobj.planName=this.name
+        this.customerbillobj.plan_type=this.type
 
-      this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res2)=>{
-        console.log(res2)
-        console.log(diff)
+        this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res2)=>{
         alert("recharge successfull")
       })
 
@@ -176,10 +183,11 @@ popup(){
     else if(diff<-10) {
       alert("your account has been suspended")
     }
-    else if(diff>0){
+    else if(diff>0.9){
       alert("your plan is valid till "+diff+" days")
     }
   }
+}
   else{
     this.customerbillobj.customerId=sessionStorage.getItem("customerid");
       this.customerbillobj.email=sessionStorage.getItem("email");
@@ -190,7 +198,6 @@ popup(){
       this.customerbillobj.plan_type=this.type
       console.log(this.customerbillobj)
       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res1)=>{
-        console.log(res1+"((((((((((((((((")
       alert(res1)})
   }
   })  
