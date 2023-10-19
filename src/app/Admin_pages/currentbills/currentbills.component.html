@@ -1,7 +1,7 @@
 <div class="background">
     <form class="lists" #form1="ngForm">
     
-      <table class="a" id="my-table">
+      <table class="a">
     
           <thead>
     
@@ -9,7 +9,7 @@
     
                   <th>S.no</th>
 
-                  <th>Mobile</th>
+                  <th>Email</th>
 
                   <th>Plan</th>
     
@@ -23,7 +23,6 @@
                   
                   <th>Status</th>
     
-                  <th>Select</th>
               </tr>
     
           </thead>
@@ -34,7 +33,7 @@
     
                   <th>{{z+1}}</th>
 
-                  <th>{{num}}</th>
+                  <th>{{k.email}}</th>
     
                   <td>{{k.planName}}</td>
     
@@ -44,7 +43,6 @@
                   <td>{{k.planAmount}}</td>
                   <td>{{k.planDueDate.split('T')[0]}}</td>
                   <td>{{k.planstatus}}</td>
-                  <td><input type="radio" (click)="button=true" name="p" (click)="date = k.planDueDate" (click)="show()" (click)="name=k.planName;type=k.plan_type;duration=k.planDuration;amount=k.planAmount;due=k.planDueDate"></td>
 
               </tr>
     
@@ -53,5 +51,4 @@
       </table>
     
     </form>
-    <button class="del" *ngIf="button" (click)="download()">Download</button>
 </div>

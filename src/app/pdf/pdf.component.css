@@ -1,0 +1,26 @@
+#output {
+   width: 100%;
+   height: 100vh;
+   margin-top: 20px;
+ }
+
+ #my-table {
+   border: solid 1px #565656;
+   border-collapse: collapse;
+   font-family: helvetica,serif;
+   font-size: 10pt;
+   width: 180mm;
+ }
+
+ #my-table th {
+   border: solid 1px #565656;
+   color: #000000;
+   text-align: center;
+   padding: 5px;
+ }
+
+ #my-table td {
+   border: solid 1px #565656;
+   padding: 2px 5px;
+   color: black;
+ }

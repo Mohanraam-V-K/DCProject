@@ -115,23 +115,35 @@ ngOnInit():void{
   }
 
 popup(){
-  if (this.form==false){
-    this.form=true;
+  this.customerbillobj.email=sessionStorage.getItem('email')
+  this.userservice.getplanofthecustomer(this.customerbillobj).subscribe((res2)=>{
+    if(res2==null){
+    if (this.form==false){
+      this.form=true;
+    }
+    else{
+      this.form=false;
+    }
   }
   else{
-    this.form=false;
+    alert("Active plan exists")
   }
+  })
+ 
 }
 
   Buy(){
     
   if(sessionStorage.getItem("status")=="active"){
+    this.customerbillobj.email=sessionStorage.getItem('email')
   var today = new Date();
   var startDate = new Date();
   console.log(today)
   startDate.setDate(today.getDate() + this.validity);
   let val=startDate.toISOString().split('T')[0]+"T09:00:00";
   this.userservice.getplanofthecustomer(this.customerbillobj).subscribe((res1)=>{
+    console.log(this.customerbillobj.email+"ASDASDASDASDASd")
+    console.log(res1+"!@#!@#!@#")
     if(res1!=null){
     this.msg1=res1
     this.due=this.msg1.planDueDate
@@ -178,7 +190,7 @@ popup(){
       this.customerbillobj.plan_type=this.type
       console.log(this.customerbillobj)
       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res1)=>{
-        console.log(res1)
+        console.log(res1+"((((((((((((((((")
       alert(res1)})
   }
   })  

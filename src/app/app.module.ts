@@ -32,6 +32,8 @@ import { AllplansComponent } from './Admin_pages/allplans/allplans.component';
 import { BillsComponent } from './Admin_pages/bills/bills.component';
 import { ReportsComponent } from './Admin_pages/reports/reports.component';
 import { Page7Component } from './pages/page7/page7.component';
+import { CurrentbillsComponent } from './Admin_pages/currentbills/currentbills.component';
+import { PdfComponent } from './pdf/pdf.component';
 @NgModule({
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -55,6 +57,8 @@ import { Page7Component } from './pages/page7/page7.component';
     BillsComponent,
     ReportsComponent,
     Page7Component,
+    CurrentbillsComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,

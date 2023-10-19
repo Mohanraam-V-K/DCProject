@@ -1,0 +1,32 @@
+<button (click)="download()" class="btn btn-primary">download pdf</button>
+<table id="my-table">
+  <!-- <caption style="align-content: center;">Bills and Payments</caption> -->
+   <thead>
+    <caption style="caption-side: top; width: auto; text-align: center; font-weight: 700; color: black;">Discographie</caption>
+     <tr>
+       <th>Month</th>
+       <!-- <th colspan="2">Name</th> -->
+       <th>Previous Dues</th>
+       <th>Payments</th>
+       <th>Charges for this month</th>
+       <th>Amount Payable</th>
+       <th>Date of payment</th>
+     </tr>
+   </thead>
+   <tbody>
+      <tr *ngFor="let i of table_data">
+         <td >{{i.month}}</td>
+         <td >{{i.previous}}</td>
+         <td >{{i.payments}}</td>
+         <td >{{i.charges}}</td>
+         <td >{{i.amount}}</td>
+         <td >{{i.payDate}}</td>
+
+      </tr>
+     </tbody>
+   </table>
+<!-- <router-outlet></router-outlet> -->
+   <!-- <object id="output" type="application/pdf"></object> -->
+   <!-- <script src="../libs/jspdf.debug.js"></script>
+   <script src="../../dist/jspdf.plugin.autotable.js"></script> -->
+  

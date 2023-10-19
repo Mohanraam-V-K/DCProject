@@ -60,4 +60,8 @@ export class UserserviceService {
        getallbillshistory(){
         return this.http.get("http://localhost:8080/api/v1/history")
        }
+
+       getallbills(){
+        return this.http.get("http://localhost:8080/api/v1/bill")
+       }
     }

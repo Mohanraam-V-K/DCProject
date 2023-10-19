@@ -20,6 +20,7 @@ export class Page2Component {
   amount:any;
   due:any;
   show:boolean=false;
+  num:any=sessionStorage.getItem('phone')
 
   // cusobj:customerbilldata=new customerbilldata("","","","","","","")
   cusplanobj:customerbill=new customerbill("");

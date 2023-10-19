@@ -19,6 +19,8 @@ import { AllplansComponent } from './Admin_pages/allplans/allplans.component';
 import { BillsComponent } from './Admin_pages/bills/bills.component';
 import { ReportsComponent } from './Admin_pages/reports/reports.component';
 import { Page7Component } from './pages/page7/page7.component';
+import { CurrentbillsComponent } from './Admin_pages/currentbills/currentbills.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 const routes: Routes = [
   {
@@ -71,6 +73,10 @@ const routes: Routes = [
     }
   ]
   },
+  {
+    path:'pdf',
+    component:PdfComponent
+  },
 {
   path:'adminpage',
   component:AdminpageComponent,
@@ -98,6 +104,10 @@ const routes: Routes = [
     {
       path:'bills',
       component:BillsComponent
+    },
+    {
+      path:'currentbills',
+      component:CurrentbillsComponent
     }
   ]
 }
