@@ -1,57 +1,57 @@
 <div class="background">
     <form class="lists" #form1="ngForm">
-    
       <table class="a" id="my-table">
-    
           <thead>
-    
               <tr>
-    
                   <th>S.no</th>
-
                   <th>Mobile</th>
-
                   <th>Plan</th>
-    
                   <th>Type</th>
-    
                   <th>Validity</th>
-    
                   <th>Amount</th>
-
                   <th>Expiry Date</th>
-                  
                   <th>Status</th>
-    
                   <th></th>
               </tr>
-    
           </thead>
-    
           <tbody>
-    
               <tr  *ngFor="let k of msg,let z=index" >
-    
                   <th>{{z+1}}</th>
-
                   <th>{{num}}</th>
-    
                   <td>{{k.planName}}</td>
-    
                   <td>{{k.plan_type}}</td>
-    
                   <td>{{k.planDuration}}</td>
                   <td>{{k.planAmount}}</td>
                   <td>{{k.planDueDate.split('T')[0]}}</td>
                   <td>{{k.planstatus}}</td>
-                  <td><input type="radio" (click)="button=true" name="p" (click)="date = k.planDueDate" (click)="show()" (click)="name=k.planName;type=k.plan_type;duration=k.planDuration;amount=k.planAmount;due=k.planDueDate"></td>
-
+                  <td><input type="radio" (click)="button=true" name="p" (click)="date = k.planDueDate" (click)="show()" (click)="name=k.planName;type=k.plan_type;duration=k.planDuration;amount=k.planAmount;due=k.planDueDate.split('T')[0];stat=k.planstatus;hide=true"></td>
               </tr>
-    
           </tbody>
-    
       </table>
-    
+      <table style="margin-top: 50px;" class="a" id="my-table1" *ngIf="hide">
+        <thead>
+            <tr>
+                <th>Mobile</th>
+                <th>Plan</th>
+                <th>Type</th>
+                <th>Validity</th>
+                <th>Amount</th>
+                <th>Expiry Date</th> 
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>{{num}}</th>
+                <td>{{name}}</td>
+                <td>{{type}}</td>
+                <td>{{duration}}</td>
+                <td>{{amount}}</td>
+                <td>{{due}}</td>
+                <td>{{stat}}</td>
+            </tr>
+        </tbody>
+    </table>
     </form>
     <button class="del" *ngIf="button" (click)="download()">Download</button>
 </div>

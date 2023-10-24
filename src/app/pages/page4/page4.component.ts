@@ -24,7 +24,8 @@ duration:string=""
 amount:string=""
 due:string=""
 num:any=sessionStorage.getItem('phone')
-
+hide:boolean=false
+stat:string=""
 ngOnInit():void{
   this.billmailobj.email=sessionStorage.getItem('email')
   this.userservice.getmybillhistory(this.billmailobj).subscribe((res)=>{
@@ -75,7 +76,7 @@ address:any=sessionStorage.getItem('address')
     doc.setFont('','normal');
     // doc.text('Statement Period : '+this.cycle,20,75)
     autoTable(doc,
-      {html: '#my-table',
+      {html: '#my-table1',
       startY:90,
       theme:'grid',
       styles: { halign: 'center' },

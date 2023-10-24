@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { update } from 'src/signin';
+import { delc, delcb, update } from 'src/signin';
 import { UserserviceService } from 'src/userservice.service';
 
 @Component({
@@ -23,7 +23,6 @@ updateobj:update=new update();
 submit(){
   this.updateobj.email=sessionStorage.getItem('email')
   this.userservice.updateprofile(this.updateobj).subscribe((res)=>{
-    console.log(res)
     if(res=="NameSuccess"){
       sessionStorage.setItem('name',this.updateobj.customerName)
     }
@@ -37,4 +36,6 @@ submit(){
   })
 }
 // console.log(updateobj)
+delcbobj:delcb=new delcb();
+delcobj:delc=new delc();
 }

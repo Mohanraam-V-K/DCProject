@@ -1,166 +1,84 @@
 <div class="background"><button class="press" (click)="mobile1()">Mobile</button>
-
     <button class="press" (click)="internet1()">Internet</button>
-
-
 <form class="lists" *ngIf="mobile" >
-
     <h2>Mobile</h2>
-
   <table class="a">
-
       <thead>
-
           <tr>
-
               <th>S.no</th>
-
               <th>Name</th>
-
               <th>Validity</th>
-
               <th>Amount</th>
-
           </tr>
-
       </thead>
-
       <tbody class="c">
-
           <tr  *ngFor="let k of msg.slice(4);let z=index" (click)="name = k.planName;validity = k.planValidity;data=k.data;amount=k.planAmount;id=k.planId;type=k.planType;sms=k.sms;talktime=k.talktime" (click)="plandet()" >
-
               <th>{{z+1}}</th>
-
               <td>{{k.planName}}</td>
-
               <td>{{k.planValidity}}</td>
-
               <td>{{k.planAmount}}</td>
-
           </tr>
-
       </tbody>
-
   </table>
-
 </form>
-
 <div class="lists" *ngIf="internet">
-
     <h2>Internet</h2>
-
     <table class="a">
-
         <thead>
-
             <tr>
-
                 <th>S.no</th>
-
                 <th>Name</th>
-
                 <th>Validity</th>
-
                 <th>Amount</th>
-
             </tr>
-
         </thead>
-
         <tbody class="c">
-
             <tr  *ngFor="let k of msg.slice(0,4);let z=index" (click)="name = k.planName;validity = k.planValidity;data=k.data;amount=k.planAmount;id=k.planId;type=k.planType;sms=k.sms;talktime=k.talktime" (click)="plandet()">
-
                 <th>{{z+1}}</th>
-  
                 <td>{{k.planName}}</td>
-  
                 <td>{{k.planValidity}}</td>
-  
                 <td>{{k.planAmount}}</td>
-  
             </tr>
-
         </tbody>
-
-
     </table>
-
   </div>
-
   <div class="lists1" *ngIf="plan11">
-
     <table class="b">
-
             <tr>
-
                 <th style="transform: translate(16%,0%);">ID :</th>
-
                 <td >{{id}}</td>
-
             </tr>
-
             <tr>
-
                 <th style="transform: translate(10%,0%);">Plan :</th>
-
                 <td>{{name}}</td>
-
             </tr>
-
             <tr>
-
                 <th style="transform: translate(10%,0%);">Type :</th>
-
                 <td>{{type}}</td>
-
             </tr>
-
             <tr>
-
                 <th style="transform: translate(10%,0%);">Data :</th>
-
                 <td>{{data}}</td>
-
             </tr>
-
             <tr>
-
                 <th>Talktime :</th>
-
                 <td>{{talktime}}</td>
-
             </tr>
-
             <tr>
-
                 <th style="transform: translate(10%,0%);">SMS :</th>
-
                 <td>{{sms}}</td>
-
             </tr>
-
             <tr>
-
                 <th style="transform: translate(3%,0%);">Validity :</th>
-
                 <td>{{validity}}</td>
-
             </tr>
-
             <tr>
-
                 <th style="transform: translate(2%,0%);">Amount :</th>
-
                 <td>{{amount}}</td>
-
             </tr>
-
             <button class="press" style="transform: translate(80%,-30%);" (click)="popup()" >Buy
             </button>
-
     </table>
-
 </div>
 <form action="" class="form1" *ngIf="form">
     <!-- <mat-toolbar class="top" fxLayout="row" fxLayoutAlign="start stretch" > -->
@@ -169,7 +87,6 @@
         <button mat-button (click)="draw1=true" (click)="draw=false"><b>Net Banking</b>
         </button>
         <button mat-button (click)="form=false" style="margin-left: 260px;"><mat-icon>close</mat-icon></button>
-        
         <!-- <span fxFlex></span>
       </mat-toolbar> -->
     <!-- <mat-drawer-container mode="up" class="top">
@@ -228,7 +145,6 @@
                         <input type="password" name="no." id="no." placeholder="CVV">
                         <button class="add" (click)="Buy()">Pay</button>
                     </div>
-    
                 </div>
             </form>
         <!-- </mat-drawer>

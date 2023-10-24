@@ -15,13 +15,32 @@ export class ReportsComponent {
   catogory:string="";
   description:string="";
   date:string="";
+  searchterm1:string="completed";
+  searchterm2:string="pending";
+  filteredItems1: any[] = [];
+  filteredItems2: any[] = [];
+  len:number
   reportaccobj:reportacc=new reportacc()
   constructor(private userservice:UserserviceService,private router:Router){}
   ngOnInit():void{
   this.userservice.getallreport().subscribe((res1)=>{
     this.msg=res1
     console.log(this.msg);
+    this.filteredItems1=this.msg
+    this.filteredItems2=this.msg
+    this.filteredItems1 = this.msg.filter((filteredItem1: { status: string; }) =>
+
+      filteredItem1.status.toLowerCase().includes(this.searchterm1.toLowerCase())
+
+    );
+    this.len=this.filteredItems1.length
+    this.filteredItems2 = this.msg.filter((filteredItems2: { status: string; }) =>
+
+      filteredItems2.status.toLowerCase().includes(this.searchterm2.toLowerCase())
+
+    );
   })
+
   }
   yes(){
     this.reportaccobj.email=this.email

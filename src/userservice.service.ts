@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { addacustomer, billmail, changepassword, customer, customerbill, customerbilldata, getacustomerbill, login, report, reportacc, signup, update } from './signin';
+import { addacustomer, billmail, changepassword, customer, customerbill, customerbilldata, delc, delcb, getacustomerbill, login, report, reportacc, signup, update } from './signin';
 
 @Injectable({
   providedIn: 'root'
@@ -66,10 +66,19 @@ export class UserserviceService {
        }
 
        yesreport(reportaccobj:reportacc){
-        return this.http.get("http://localhost:8080/api/v1/report/yes/"+reportaccobj.email)
+        console.log(reportaccobj.email)
+        return this.http.get("http://localhost:8080/api/v1/report/yes/"+reportaccobj.email,{responseType: 'text'})
        }
 
        noreport(reportaccobj:reportacc){
-        return this.http.get("http://localhost:8080/api/v1/report/no/"+reportaccobj.email)
+        return this.http.get("http://localhost:8080/api/v1/report/no/"+reportaccobj.email,{responseType: 'text'})
+       }
+
+       deletecb(delcbobj:delcb){
+        return this.http.delete("http://localhost:8080/api/v1/bill/"+delcbobj.email,{responseType: 'text'})
+       }
+
+       deletec(delcobj:delc){
+        return this.http.delete("http://localhost:8080/api/v1/customer/"+delcobj.email,{responseType: 'text'})
        }
     }

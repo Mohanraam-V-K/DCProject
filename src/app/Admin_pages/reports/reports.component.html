@@ -29,7 +29,7 @@
       <tbody>
 
 
-        <tr *ngFor="let i of msg,let j=index">
+        <tr *ngFor="let i of filteredItems2,let j=index">
             <th>{{j+1}}</th>
 
             <td>{{i.customeremail}}</td>
@@ -45,6 +45,22 @@
             <td><button class="b" (click)="email = i.customeremail" (click)="yes()" ><mat-icon style="color: white;">check</mat-icon></button><button class="c" (click)="no()" (click)="email = i.customeremail"><mat-icon style="color: white;">close</mat-icon></button></td>
 
         </tr>
+        <tr *ngFor="let i of filteredItems1,let j=index">
+          <th>{{j+1+len}}</th>
+
+          <td>{{i.customeremail}}</td>
+
+          <td>{{i.category}}</td>
+
+          <td>{{i.description}}</td>
+
+          <td>{{i.date}}</td>
+
+          <td>{{i.status}}</td>
+
+          <td>--</td>
+
+      </tr>
 
     </tbody>
 

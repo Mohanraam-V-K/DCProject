@@ -165,7 +165,9 @@
   
    
   
-   
+   .a tr{
+column-gap: 1000px;   
+}
   
    
   
@@ -182,9 +184,6 @@
    
   
     color: black;
-  
-   
-  
   }
   
   .a th {

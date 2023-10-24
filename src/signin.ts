@@ -137,3 +137,11 @@ export class billmail{
 export class reportacc{
     email:any
 }
+
+export class delcb{
+    email:any
+}
+
+export class delc{
+    email:any
+}

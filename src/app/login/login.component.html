@@ -1,144 +1,52 @@
-<!-- <form action="action_page.php" method="post">
-    <div class="imgcontainer">
-      <img src="../../assets/admin.png" alt="Avatar" class="avatar">
-    </div>
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="userobj.username"/>
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="userobj.password"/>
-      <button type="submit" (click)="loginnow()">Login</button>
-      <button type="signup" (click)="registernow()">Signup</button>
-    </div>
-  </form>
-<router-outlet></router-outlet> -->
-  <!-- <div class="background">
-    <div class="shape"></div>
-    <div class="shape"></div>
-  </div>
-  <form *ngIf="!isRegister">
-    <h3>Sign in</h3>
-    <label for="username">Username</label>
-    <input type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email or Phone" id="username">
-    <label for="password">Password</label>
-    <input type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Password" id="password">
-    <button id="b" style="color: black" (click)="loginnow()" routerLink="login">Sign In</button>
-    <div class="social">
-        <button id="c" class="go" (click)="isRegister = !isRegister"> <i class="fab fa-google"></i>  Sign up</button>
-    </div>
-  </form>
-  <form *ngIf="isRegister">
-    <h3>Sign up</h3>
-    <label for="username">Name</label>
-    <input type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Name" id="username">
-    <label for="password">Password</label>
-    <input type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Password" id="password">
-    <button id="b" style="color: black" (click)="registernow()">Sign up</button>
-    <div class="social">
-        <button id="c" class="go" (click)="isRegister = !isRegister"> <i class="fab fa-google"></i>  Sign in</button>
-    </div>
-  </form>
-<router-outlet></router-outlet> -->
-
-
-
 <div class="background">
-
-
-<form class="dorm2" *ngIf="isRegister==true">
-  
+  <p class="im"></p>
+<form class="dorm2" *ngIf="isRegister==true">  
   <h3>Sign in</h3>
+  <label class="lab1" for="username">Email :</label>
 
-  <label class="lab1" for="username">Username :</label>
-
-  <input class="input1" type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email or Username" id="username" required>
-
+  <input class="input1" type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Enter email" id="username" required >
   <label class="lab1" for="password">Password :</label>
-
   <input class="input1" type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Password" id="password">
-
-  
-
   <button id="b"  (click)="loginnow()">Sign In</button>
-  
   <p class="font" (click)="pass = true" (click)="isRegister = false">Forgot Password ?</p>
   <p class="font" (click)="signups = true" (click)="isRegister = false">Sign Up</p>
-
 </form>
-
 <form class="dorm2" *ngIf="pass==true">
-
   <h3>Forgot Password</h3>
-
   <label class="lab1" for="username">Enter Email  :</label>
-
   <input class="input1" type="text" name ="userName" [(ngModel)]="userobj.username" placeholder="Email" id="username">
-
   <button id="d"  (click)="forgotnow()">Send OTP</button>
-
   <label class="lab1" for="password">Enter OTP :</label>
-
   <input class="input1" type="password" name ="password" [(ngModel)]="userobj.password" placeholder="Enter OTP" id="password">
-
   <button id="b"  (click)="loginnow()" routerLink="login">Confirm</button>
-
   <p class="font" (click)="isRegister = true" (click)="pass = false">Sign in</p>
-
 </form>
 <form class="dorm1" *ngIf="signups==true">
-
   <h3>Sign up</h3>
-
   <label  for="customerName">Name :</label>
-
   <input class="input2" type="text" name ="customerName" [(ngModel)]="signupobj.customerName" placeholder="Name" id="customerName">
-
   <label  for="email">Email id :</label>
-
   <input class="input2" type="text" name ="email" [(ngModel)]="signupobj.email" placeholder="Email" id="email">
-
   <label  for="phoneNumber">Phone number :</label>
-
   <input class="input2" type="" name ="phoneNumber" [(ngModel)]="signupobj.phoneNumber" placeholder="Number" id="phoneNumber">
-
   <label for="gender">Gender :</label>
-
   <select class="input2" name="gender" id="gender" aria-placeholder="Male" [(ngModel)]="signupobj.gender" >
     <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="male">Male</option>
     <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="female">Female</option>
     <option style="background-color:rgb(58, 55, 55);color: aliceblue;" value="others">Others</option>
 </select>
-
 <label style="transform: translate(475%,-1400%);" for="address">Address :</label>
-
 <input style="transform: translate(120%,-560%);" class="input3" type="text" name ="address" [(ngModel)]="signupobj.address" placeholder="Address" id="address">
-
-
   <label style="transform: translate(245%,-1400%);" for="password">Create Password :</label>
-
   <input style="transform: translate(120%,-560%);" class="input3" type="password" name ="password" [(ngModel)]="signupobj.password" placeholder="Password" id="password">
-
   <label style="transform: translate(230%,-1400%);" for="cpassword">Confirm Password :</label>
-
   <input style="transform: translate(120%,-560%);" class="input3" type="password" name ="cpassword" [(ngModel)]="signupobj.cpassword" placeholder="Confirm Password" id="cpassword">
-
   <a href style="transform: translate(230%,-1400%); color: aliceblue;" for="cpassword">Confirm Password :</a>
-
   <button id="b" style="transform: translate(0%,-450%);" (click)="terms1()">Next</button>
-
   <p class="font" style="transform: translate(0%,-1200%);" (click)="isRegister = true" (click)="signups = false">Sign in</p>
-
 </form>
 <form class="dorm2" name="form" *ngIf="terms==true">
-
- 
-
   <h3>Terms and Conditions</h3>
-
- 
-
   <textarea name="" id="" cols="30" rows="10">
     By using this website, you agree to these terms and conditions
     - Users may be required to create accounts for certain services.
@@ -157,18 +65,8 @@
     - If any provision of these terms is found to be unenforceable, the remaining provisions will remain in effect.
     - These terms constitute the entire agreement between the user and DC Telecom Services.</textarea>
     <label for="" style="color: white;">Agree</label><input style="margin-left: 3px;" type="checkbox" name="check" value="a" (click)="check()" >
-
- 
-
   <button id="b" type="button"  (click)="signup()" *ngIf="button == true" >Sign Up</button>
-
- 
-
   <p class="font" (click)="signups = true" (click)="terms = false">back</p>
-
- 
-
 </form>
-
 </div>
 <router-outlet></router-outlet>

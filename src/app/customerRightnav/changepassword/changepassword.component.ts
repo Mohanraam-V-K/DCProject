@@ -17,12 +17,17 @@ export class ChangepasswordComponent {
   
   constructor(private userservice:UserserviceService,private router:Router){
   }
-
+a(){
+  if(this.changeobj.oldpassword==sessionStorage.getItem('password')){
+    this.oldpwd="password is correct"}
+    else{
+      this.oldpwd="password doesn't match"
+    }
+}
 
   changepass(){
     if(this.changeobj.newpassword!=""){
     if(this.changeobj.oldpassword==sessionStorage.getItem('password')){
-      this.oldpwd="password is correct"
       if(this.changeobj.newpassword!=sessionStorage.getItem('password')){
           if(this.changeobj.newpassword==this.changeobj.confirmnewpassword){
         this.customerobj.email=sessionStorage.getItem('email');

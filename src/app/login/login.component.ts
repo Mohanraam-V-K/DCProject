@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit{
   button:boolean=false;
   terms:boolean=false;
   pass:boolean=false;
+  em:string=this.userobj.username;
+  b:string="";
   constructor(private userservice:UserserviceService,private router:Router){
   }
   ngOnInit(){
@@ -77,6 +79,14 @@ export class LoginComponent implements OnInit{
     })
   }   
 } 
+a(){
+  if(this.em.includes("@gmail.com")){
+    this.b="Email valid"
+  }
+  else{
+    this.b="Enter valid email"
+  }
+}
 
   terms1(){
       if(this.signupobj.customerName!=""){
