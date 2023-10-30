@@ -32,7 +32,6 @@ export class Page2Component {
     this.cusplanobj.email=sessionStorage.getItem("email");
     this.userservice.getplanofacustomer(this.cusplanobj).subscribe((res)=>{
       this.wes=res
-      console.log(this.wes.planstatus)
       if(this.wes.planstatus=="active plan"){
         this.show=true
       this.msg=res
@@ -53,10 +52,15 @@ export class Page2Component {
   }
   recharge(){
     if(this.show==false){
+      if(sessionStorage.getItem('status')=="active"||sessionStorage.getItem('status')=="Active"){
       this.router.navigate(['/customerpage/allplans'])
+      }
+      else{
+        alert("your account has been suspended please pay the fine amount in your profile to avail our services")
+      }
     }
     else{
-      alert('Avtive Plan Exists')
+      alert('Active Plan Exists')
     }
   }
   username:any=sessionStorage.getItem('name')

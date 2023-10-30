@@ -139,9 +139,13 @@ export class reportacc{
 }
 
 export class delcb{
-    email:any
+    customerId:any
 }
 
 export class delc{
-    email:any
+    customerId:any
+}
+
+export class paythefine{
+    customerId:any
 }

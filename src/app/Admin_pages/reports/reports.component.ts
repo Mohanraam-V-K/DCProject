@@ -28,15 +28,17 @@ export class ReportsComponent {
     console.log(this.msg);
     this.filteredItems1=this.msg
     this.filteredItems2=this.msg
-    this.filteredItems1 = this.msg.filter((filteredItem1: { status: string; }) =>
-
-      filteredItem1.status.toLowerCase().includes(this.searchterm1.toLowerCase())
-
-    );
-    this.len=this.filteredItems1.length
+    
+    
     this.filteredItems2 = this.msg.filter((filteredItems2: { status: string; }) =>
 
       filteredItems2.status.toLowerCase().includes(this.searchterm2.toLowerCase())
+
+    );
+    this.len=this.filteredItems2.length
+    this.filteredItems1 = this.msg.filter((filteredItem1: { status: string; }) =>
+
+      filteredItem1.status.toLowerCase().includes(this.searchterm1.toLowerCase())
 
     );
   })
@@ -48,6 +50,7 @@ export class ReportsComponent {
     console.log(this.email)
     this.userservice.yesreport(this.reportaccobj).subscribe((res2)=>{
       alert("issue accepted")
+      window.location.reload()
     })
   }
   no(){
@@ -56,6 +59,7 @@ export class ReportsComponent {
     console.log(this.email)
     this.userservice.noreport(this.reportaccobj).subscribe((res2)=>{
       alert("issue denied")
+      window.location.reload()
     })
   }
 }

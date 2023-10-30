@@ -146,7 +146,7 @@ popup(){
 
   Buy(){
     
-  if(sessionStorage.getItem("status")=="active"){
+  if(sessionStorage.getItem("status")=="active"||sessionStorage.getItem("status")=="Active"){
     this.customerbillobj.email=sessionStorage.getItem('email')
   var today = new Date();
   var startDate = new Date();
@@ -181,7 +181,7 @@ popup(){
 
     }
     else if(diff<-10) {
-      alert("your account has been suspended")
+      alert("your account has been suspended please pay the fine amount in your profile to avail our services")
     }
     else if(diff>0.9){
       alert("your plan is valid till "+diff+" days")
@@ -198,7 +198,9 @@ popup(){
       this.customerbillobj.plan_type=this.type
       console.log(this.customerbillobj)
       this.userservice.addplanforcustomer(this.customerbillobj).subscribe((res1)=>{
-      alert(res1)})
+      alert("recharge successfull")
+      window.location.reload()
+    })
   }
   })  
 }

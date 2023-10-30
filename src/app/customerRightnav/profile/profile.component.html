@@ -1,7 +1,7 @@
 <div class="background">
 <form class="form">
 
-    <div id="im"><button class="press" (click)="up = !up" >Update</button></div>
+    <div id="im"><button class="press" (click)="up = !up" >Update</button><button class="press1" (click)="delete()" >Delete Account</button>    <button class="press" style="padding: 5px 10px;transform: translate(-100%,700%);" *ngIf="p" (click)="popup()">Pay</button>    </div>
 
     <!-- <img src="pic.jpg" alt="" width="50" height="50"> -->
 
@@ -27,9 +27,14 @@
 
     <label style="margin-left: 49px;font-size: x-large;" for="address">Address :</label>
 
+    <label style="font-size: x-large;transform: translate(-100%,500%);">Fine Amount :</label>
+
+    <label id="fine" >{{fine}}</label>
+
+
     </div>
 
-    <div id="k" *ngIf="up" style="transform: translate(50%,-101%);">
+    <div id="k" *ngIf="up">
 
         <input style="transform: translate(0%,-20%); border-radius: 5px; border: 1px solid;" type="text" name="name" for="name" placeholder="Enter Name" [(ngModel)]="updateobj.customerName">
     
@@ -47,32 +52,12 @@
     
         <br><br>
     
-        <input style="transform: translate(0%,-10%); border-radius: 5px; border: 1px solid;" type="text" name="name" for="name" placeholder="Enter Address" [(ngModel)]="updateobj.address">
-        <button class="press" style="transform: translate(-500%,90%);" (click)="submit()">Submit</button>
+        <input style="transform: translate(0%,-200%); border-radius: 5px; border: 1px solid;" type="text" name="name" for="name" placeholder="Enter Address" [(ngModel)]="updateobj.address">
+        <button class="press" style="transform: translate(-650%,10%);" (click)="submit()">Submit</button>
 
         </div>
-        <!-- <div id="k" *ngIf="!update" style="transform: translate(50%,-62%);">
-
-            <label style="font-size: x-large;" for="name">Name1</label>
-        
-            <br><br>
-        
-            <label style="font-size: x-large;" for="gender">Gender</label>
-        
-            <br><br>
-        
-            <label style="font-size: x-large;margin-bottom: 3px;" for="email">Email</label>
-        
-            <br><br>
-        
-            <label for="phone;" style="font-size: x-large;">Phone</label>
-        
-            <br><br>
-        
-            <label style="font-size: x-large; width: 350px;line-height: 27px;" for="address">Address</label>
-        
-            </div> -->
-        <div id="k" style="transform: translate(50%,-101%);" *ngIf="!up">
+       
+        <div id="k" *ngIf="!up">
 
             <label style="font-size: x-large;" for="name">{{name}}</label>
         
@@ -93,5 +78,86 @@
             <label style="font-size: x-large; width: 350px;line-height: 27px;" for="address">{{address}}</label>
         
             </div>
-</form></div>
+</form>
+
+<form action="" class="form1" *ngIf="form">
+    <button mat-button (click)="draw=true" (click)="draw1=false"><b>Card</b>
+    </button>
+    <button mat-button (click)="draw1=true" (click)="draw=false"><b>Net Banking</b>
+    </button>
+    <button mat-button (click)="popup()" style="margin-left: 260px;"><mat-icon>close</mat-icon></button>
+        <form action="" class="form2" *ngIf="draw">
+            <div>
+                <select class="select" name="select" id="select" >
+                    <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="male">Debit</option>
+                    <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="female">Credit</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Card number :</label>
+                <div> 
+                    <input type="text" name="no." id="no." placeholder="Card number">
+                </div>
+            </div>
+            <div>
+                <label for="">Validity :</label>
+                <div>
+                    <label for="">Month :</label>
+                    <select class="select" name="select" id="select" >
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="01">01</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">02</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="03">03</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">04</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="05">05</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="06">06</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="07">07</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="08">08</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="09">09</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="10">10</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="11">11</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="12">12</option>
+                    </select>
+                    <label for="">Year :</label>
+                    <select class="select" name="select" id="select" >
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="01">2023</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">2024</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="03">2025</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="02">2026</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="05">2027</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="06">2028</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="07">2029</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="08">2030</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="09">2031</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="10">2032</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="11">2033</option>
+                        <option style="background-color:rgb(58, 55, 55) ;color: aliceblue;" value="12">2034</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="cvv">CVV :</label>
+                <div>
+                    <input type="password" name="no." id="no." placeholder="CVV">
+                    <button class="add" (click)="payfine()">Pay</button>
+                </div>
+            </div>
+        </form>
+        <form action="" class="form3" *ngIf="draw1">
+            <label for="" >Account number :</label>
+            <div>
+                <input type="text" placeholder="Acc. no.">
+            </div>
+            <div>
+                <label for="">IFSC Code :</label>
+            </div>
+            <div>
+                <input type="text" name="" id="">
+            </div>
+            <div>
+                <button class="add1" (click)="payfine()">Pay</button>
+            </div>
+        </form>
+        </form>
+
+</div>
 <router-outlet></router-outlet>

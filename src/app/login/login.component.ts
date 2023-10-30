@@ -71,6 +71,7 @@ export class LoginComponent implements OnInit{
         sessionStorage.setItem('phone',this.getdata.phoneNumber)
         sessionStorage.setItem('customerid',this.getdata.customerId)
         sessionStorage.setItem('status',this.getdata.status)
+        sessionStorage.setItem('fineamount',this.getdata.fineAmount)
         this.router.navigate(['/customerpage/home'])
       }
       else{
@@ -135,6 +136,7 @@ a(){
     this.userservice.addACustomer(this.signupobj).subscribe((data)=>{
       if(data=="Created"){
         alert("Added successfully")
+        window.location.reload()
       }
       else if(data=="Already Exist"){
         alert("Customer already exists")

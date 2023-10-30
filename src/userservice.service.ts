@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { addacustomer, billmail, changepassword, customer, customerbill, customerbilldata, delc, delcb, getacustomerbill, login, report, reportacc, signup, update } from './signin';
+import { addacustomer, billmail, changepassword, customer, customerbill, customerbilldata, delc, delcb, getacustomerbill, login, paythefine, report, reportacc, signup, update } from './signin';
 
 @Injectable({
   providedIn: 'root'
@@ -75,10 +75,15 @@ export class UserserviceService {
        }
 
        deletecb(delcbobj:delcb){
-        return this.http.delete("http://localhost:8080/api/v1/bill/"+delcbobj.email,{responseType: 'text'})
+        return this.http.put("http://localhost:8080/api/v1/bill/delete",delcbobj,{responseType: 'text'})
        }
 
        deletec(delcobj:delc){
-        return this.http.delete("http://localhost:8080/api/v1/customer/"+delcobj.email,{responseType: 'text'})
+        return this.http.put("http://localhost:8080/api/v1/customer/delete",delcobj,{responseType: 'text'})
        }
+
+       finepay(fineobj:paythefine){
+        return this.http.post("http://localhost:8080/api/v1/customer/payFine",fineobj,{responseType: 'text'})
+       }
+
     }

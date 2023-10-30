@@ -81,16 +81,11 @@
     </table>
 </div>
 <form action="" class="form1" *ngIf="form">
-    <!-- <mat-toolbar class="top" fxLayout="row" fxLayoutAlign="start stretch" > -->
         <button mat-button (click)="draw=true" (click)="draw1=false"><b>Card</b>
         </button>
         <button mat-button (click)="draw1=true" (click)="draw=false"><b>Net Banking</b>
         </button>
         <button mat-button (click)="form=false" style="margin-left: 260px;"><mat-icon>close</mat-icon></button>
-        <!-- <span fxFlex></span>
-      </mat-toolbar> -->
-    <!-- <mat-drawer-container mode="up" class="top">
-        <mat-drawer style="background-color: aliceblue;" fxFlex autosize class="top1" *ngIf="draw" > -->
             <form action="" class="form2" *ngIf="draw">
                 <div>
                     <select class="select" name="select" id="select" >
@@ -147,10 +142,6 @@
                     </div>
                 </div>
             </form>
-        <!-- </mat-drawer>
-    </mat-drawer-container> -->
-    <!-- <mat-drawer-container mode="up" class="top">
-        <mat-drawer style="background-color: aliceblue;" fxFlex autosize class="top1" *ngIf="draw1" > -->
             <form action="" class="form3" *ngIf="draw1">
                 <label for="" >Account number :</label>
                 <div>
@@ -166,8 +157,6 @@
                     <button class="add1" (click)="Buy()">Pay</button>
                 </div>
             </form>
-        <!-- </mat-drawer>
-    </mat-drawer-container> -->
 </form>
 
 </div>
